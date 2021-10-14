@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "upwardbound",
+  "version": "${version}",
+
+  "name": "Upward Bound",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://glass-launcher.net/",
+    "sources": "https://github.com/calmilamsy/BIN-fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/upwardbound/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:event_bus": [
+      "net.martin1912.upwardbound.events.init.AchievementListener",
+      "net.martin1912.upwardbound.events.init.BlockListener",
+      "net.martin1912.upwardbound.events.init.ItemListener",
+      "net.martin1912.upwardbound.events.init.PlayerHandlerListener",
+      "net.martin1912.upwardbound.events.init.RecipeListener"
+    ],
+    "stationapi:event_bus_client": [
+      "net.martin1912.upwardbound.events.init.ModelListener",
+      "net.martin1912.upwardbound.events.init.KeyBindingListener",
+      "net.martin1912.upwardbound.events.init.TextureListener",
+      "net.martin1912.upwardbound.events.ingame.KeyPressedListener"
+    ],
+    "stationapi:event_bus_server": [
+      "net.martin1912.upwardbound.events.init.ServerInitListener"
+    ]
+  },
+  "mixins": [
+    "upwardbound.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3",
+    "betaextras": "1.0.0pre1"
+  }
+}
