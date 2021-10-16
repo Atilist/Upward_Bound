@@ -4,9 +4,9 @@
   "version": "${version}",
 
   "name": "Upward Bound",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "This mod revamps the Skylands and makes them accessible.",
   "authors": [
-    "Me!"
+    "Martin19_12/Atilist"
   ],
   "contact": {
     "homepage": "https://glass-launcher.net/",
@@ -23,7 +23,8 @@
       "net.martin1912.upwardbound.events.init.BlockListener",
       "net.martin1912.upwardbound.events.init.ItemListener",
       "net.martin1912.upwardbound.events.init.PlayerHandlerListener",
-      "net.martin1912.upwardbound.events.init.RecipeListener"
+      "net.martin1912.upwardbound.events.init.RecipeListener",
+      "net.martin1912.upwardbound.events.init.ChunkListener"
     ],
     "stationapi:event_bus_client": [
       "net.martin1912.upwardbound.events.init.ModelListener",

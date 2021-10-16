@@ -25,6 +25,8 @@ public class TextureListener {
         BedTopHead = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedTopHead")).index;
         BedUnderside = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedUnderside")).index;
         BedWrong = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedWrong")).index;
+        InnerEnergiumite = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "Energiumite/InnerEnergiumite")).index;
+        OuterEnergiumite = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "Energiumite/OuterEnergiumite")).index;
     }
 
     public static int
@@ -35,5 +37,7 @@ public class TextureListener {
             BedTopBody,
             BedTopHead,
             BedUnderside,
-            BedWrong;
+            BedWrong,
+            InnerEnergiumite,
+            OuterEnergiumite;
 }

@@ -7,4 +7,5 @@ achievement.page.examplemod=Example
 
 item.sky_bed_item.name=Sky Bed
 
-#tile.uwu.name=nya
+tile.energiumite_blocks0.name=Inner Energiumite
+tile.energiumite_blocks1.name=Outer Energiumite

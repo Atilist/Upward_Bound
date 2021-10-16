@@ -1,5 +1,6 @@
 package net.martin1912.upwardbound.events.init;
 
+import net.martin1912.upwardbound.blocks.EnergiumiteBlocks;
 import net.martin1912.upwardbound.blocks.SkyBed;
 import net.martin1912.upwardbound.wrappers.ExampleBlockWithModel;
 import net.mine_diver.unsafeevents.listener.EventListener;
@@ -19,6 +20,7 @@ import net.modificationstation.stationapi.api.util.Null;
 public class BlockListener {
 
     public static TemplateBed skyBed;
+    public static TemplateBlockBase energiumiteBlocks;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -30,6 +32,7 @@ public class BlockListener {
         System.out.println(MOD_ID);
 
         skyBed = new SkyBed(Identifier.of(MOD_ID, "sky_bed")).setTranslationKey(MOD_ID, "sky_bed");
+        energiumiteBlocks = new EnergiumiteBlocks(Identifier.of(MOD_ID, "energiumite_blocks"), Material.GLASS).setTranslationKey(MOD_ID, "energiumite_blocks");
 
     }
 }
