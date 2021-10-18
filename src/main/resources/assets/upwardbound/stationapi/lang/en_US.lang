@@ -6,6 +6,14 @@ achievement.apple.desc=Pick up an apple.
 achievement.page.examplemod=Example
 
 item.sky_bed_item.name=Sky Bed
+item.cold_energiumite.name=Cold Energiumite
+item.dungeon_key.name=Dungeon Key
+item.dungeon_key_body.name=Dungeon Key Body
+item.dungeon_key_head.name=Dungeon Key Head
 
 tile.energiumite_blocks0.name=Inner Energiumite
 tile.energiumite_blocks1.name=Outer Energiumite
+
+tile.dungeon_blocks0.name=Floor Block
+tile.dungeon_blocks1.name=Wall Block
+

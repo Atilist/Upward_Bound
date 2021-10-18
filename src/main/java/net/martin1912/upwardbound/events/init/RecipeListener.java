@@ -16,10 +16,14 @@ public class RecipeListener {
 
         Identifier type = event.recipeId;
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED.type()) {
+            CraftingRegistry.addShapedRecipe(new ItemInstance(ItemListener.dungeonKey), "XY ", 'X', new ItemInstance(ItemListener.dungeonKeyBody), 'Y', new ItemInstance(ItemListener.dungeonKeyHead));
         }
+        /*
         if (type == RecipeRegisterEvent.Vanilla.SMELTING.type()) {
         }
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS.type()) {
         }
+
+         */
     }
 }

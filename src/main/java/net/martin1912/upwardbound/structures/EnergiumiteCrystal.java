@@ -1,7 +1,6 @@
 package net.martin1912.upwardbound.structures;
 
 import net.martin1912.upwardbound.events.init.BlockListener;
-import net.martin1912.upwardbound.events.init.BlockListener;
 import net.minecraft.level.Level;
 import net.minecraft.level.structure.Structure;
 
