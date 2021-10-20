@@ -16,6 +16,8 @@ public class ItemListener {
     public static TemplateItemBase dungeonKey;
     public static TemplateItemBase dungeonKeyBody;
     public static TemplateItemBase dungeonKeyHead;
+    public static TemplateItemBase skyBean;
+    public static TemplateItemBase robustString;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -27,5 +29,7 @@ public class ItemListener {
         dungeonKey = new DungeonKey(Identifier.of(MOD_ID, "dungeon_key")).setTranslationKey(MOD_ID, "dungeon_key");
         dungeonKeyBody = new DungeonKeyBody(Identifier.of(MOD_ID, "dungeon_key_body")).setTranslationKey(MOD_ID, "dungeon_key_body");
         dungeonKeyHead = new DungeonKeyHead(Identifier.of(MOD_ID, "dungeon_key_head")).setTranslationKey(MOD_ID, "dungeon_key_head");
+        skyBean = new SkyBean(Identifier.of(MOD_ID, "sky_bean")).setTranslationKey(MOD_ID, "sky_bean");
+        robustString = new RobustString(Identifier.of(MOD_ID, "robust_string")).setTranslationKey(MOD_ID, "robust_string");
     }
 }

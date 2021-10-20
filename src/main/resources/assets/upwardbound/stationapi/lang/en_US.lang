@@ -5,15 +5,27 @@ achievement.apple.desc=Pick up an apple.
 
 achievement.page.examplemod=Example
 
+# Actually important stuff
 item.sky_bed_item.name=Sky Bed
 item.cold_energiumite.name=Cold Energiumite
 item.dungeon_key.name=Dungeon Key
 item.dungeon_key_body.name=Dungeon Key Body
 item.dungeon_key_head.name=Dungeon Key Head
+item.sky_bean.name=Sky Bean
+item.robust_string.name=Robust String
 
 tile.energiumite_blocks0.name=Inner Energiumite
 tile.energiumite_blocks1.name=Outer Energiumite
 
 tile.dungeon_blocks0.name=Floor Block
 tile.dungeon_blocks1.name=Wall Block
+
+tile.sky_dirt0.name=Sky Dirt
+tile.sky_dirt1.name=Sky Dirt Minor Drain
+tile.sky_dirt2.name=Sky Dirt Medium Drain
+tile.sky_dirt3.name=Sky Dirt Major Drain
+tile.sky_dirt4.name=Sky Dirt High Drain
+tile.sky_dirt5.name=Sky Dirt Maximum Drain
+
+
 
