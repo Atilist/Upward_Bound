@@ -22,6 +22,10 @@ public class TextureListener {
         ItemListener.dungeonKeyHead.setTexture(Identifier.of(MOD_ID, "Items/DungeonKeyHead"));
         ItemListener.skyBean.setTexture(Identifier.of(MOD_ID, "Items/SkyBean"));
         ItemListener.robustString.setTexture(Identifier.of(MOD_ID, "Items/RobustString"));
+        ItemListener.pureAlphium.setTexture(Identifier.of(MOD_ID, "Items/PureAlphium"));
+        ItemListener.alphiumHoe.setTexture(Identifier.of(MOD_ID, "Items/AlphiumHoe"));
+        ItemListener.energiumite.setTexture(Identifier.of(MOD_ID, "Items/Energiumite"));
+        ItemListener.rodOfDreams.setTexture(Identifier.of(MOD_ID, "Items/RodOfDreams"));
 
         BedBack = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedBack")).index;
         BedFront = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedFront")).index;
@@ -64,6 +68,10 @@ public class TextureListener {
         BeanCropBigTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BeanCropBigTop")).index;
         BeanCropMatureBottom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BeanCropMatureBottom")).index;
         BeanCropMatureTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BeanCropMatureTop")).index;
+
+        EnergizedAlphium = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/EnergizedAlphium")).index;
+        PureAlphiumCompound = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/PureAlphiumCompound")).index;
+        PureAlphiumBlock = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/PureAlphiumBlock")).index;
     }
 
     public static int
@@ -107,5 +115,9 @@ public class TextureListener {
             BeanCropBigBottom,
             BeanCropBigTop,
             BeanCropMatureBottom,
-            BeanCropMatureTop;
+            BeanCropMatureTop,
+
+            EnergizedAlphium,
+            PureAlphiumCompound,
+            PureAlphiumBlock;
 }

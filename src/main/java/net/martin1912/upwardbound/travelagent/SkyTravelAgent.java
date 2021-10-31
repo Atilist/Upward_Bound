@@ -1,6 +1,7 @@
 package net.martin1912.upwardbound.travelagent;
 
 import net.martin1912.upwardbound.events.init.BlockListener;
+import net.minecraft.block.BlockBase;
 import net.minecraft.class_467;
 import net.minecraft.entity.EntityBase;
 import net.minecraft.level.Level;
@@ -84,7 +85,7 @@ public class SkyTravelAgent extends class_467 {
         int z = MathHelper.floor(arg1.z);
 
         for (int height = 127; height >= 20; height--) {
-            if (arg.getMaterial(x, height, z).isSolid() || height == 20) {
+            if (arg.getMaterial(x, height, z).isSolid() || height == 20 || arg.getTileId(x, height, z) == BlockBase.FLOWING_WATER.id || arg.getTileId(x, height, z) == BlockBase.FLOWING_LAVA.id) {
                 arg.setTileWithMetadata(x, height, z, BlockListener.skyBed.id, 0);
                 arg.setTileWithMetadata(x, height, z + 1, BlockListener.skyBed.id, 8);
 

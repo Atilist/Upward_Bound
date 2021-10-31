@@ -119,4 +119,9 @@ public class BeanCrop extends TemplatePlant {
             }
         }
     }
+
+    @Override
+    public boolean isFullOpaque() {
+        return false;
+    }
 }

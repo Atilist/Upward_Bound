@@ -13,6 +13,10 @@ item.dungeon_key_body.name=Dungeon Key Body
 item.dungeon_key_head.name=Dungeon Key Head
 item.sky_bean.name=Sky Bean
 item.robust_string.name=Robust String
+item.alphium_hoe.name=Alphium Hoe
+item.energiumite.name=Energiumite
+item.pure_alphium.name=Pure Alphium
+item.rod_of_dreams.name=Rod of Dreams
 
 tile.energiumite_blocks0.name=Inner Energiumite
 tile.energiumite_blocks1.name=Outer Energiumite
@@ -27,5 +31,8 @@ tile.sky_dirt3.name=Sky Dirt Major Drain
 tile.sky_dirt4.name=Sky Dirt High Drain
 tile.sky_dirt5.name=Sky Dirt Maximum Drain
 
+tile.processed_alphium0.name=Energized Alphium
+tile.processed_alphium1.name=Pure Alphium Compound
+tile.processed_alphium2.name=Pure Alphium Block
 
 
