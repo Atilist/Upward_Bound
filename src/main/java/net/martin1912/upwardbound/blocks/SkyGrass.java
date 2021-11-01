@@ -49,6 +49,30 @@ public class SkyGrass extends TemplateBlockBase {
                     case 5:
                         return TextureListener.StoneGardensGrassSide;
                 }
+            case 1:
+                switch (side) {
+                    case 0:
+                        return TextureListener.SkyDirt;
+                    case 1:
+                        return TextureListener.ColdGrassTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.ColdGrassSide;
+                }
+            case 2:
+                switch (side) {
+                    case 0:
+                        return TextureListener.SkyDirt;
+                    case 1:
+                        return TextureListener.LushGrassTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.LushGrassSide;
+                }
             default:
                 return super.getTextureForSide(side, meta);}
     }
@@ -68,7 +92,7 @@ public class SkyGrass extends TemplateBlockBase {
                 int var8 = z + rand.nextInt(3) - 1;
                 int var9 = level.getTileId(var6, var7 + 1, var8);
                 if (level.getTileId(var6, var7, var8) == BlockListener.skyDirt.id && level.placeTile(var6, var7 + 1, var8) >= 4 && BlockBase.LIGHT_OPACITY[var9] <= 2) {
-                    level.setTile(var6, var7, var8, BlockListener.skyGrass.id);
+                    level.setTileWithMetadata(var6, var7, var8, BlockListener.skyGrass.id, level.getTileMeta(x, y, z));
                 }
             }
 

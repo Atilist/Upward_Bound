@@ -75,6 +75,10 @@ public class TextureListener {
 
         StoneGardensGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassSide")).index;
         StoneGardensGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTop")).index;
+        ColdGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassSide")).index;
+        ColdGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassTop")).index;
+        LushGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassSide")).index;
+        LushGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassTop")).index;
     }
 
     public static int
@@ -125,5 +129,9 @@ public class TextureListener {
             PureAlphiumBlock,
 
             StoneGardensGrassSide,
-            StoneGardensGrassTop;
+            StoneGardensGrassTop,
+            ColdGrassSide,
+            ColdGrassTop,
+            LushGrassSide,
+            LushGrassTop;
 }
