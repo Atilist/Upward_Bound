@@ -72,6 +72,9 @@ public class TextureListener {
         EnergizedAlphium = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/EnergizedAlphium")).index;
         PureAlphiumCompound = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/PureAlphiumCompound")).index;
         PureAlphiumBlock = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/PureAlphiumBlock")).index;
+
+        StoneGardensGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassSide")).index;
+        StoneGardensGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTop")).index;
     }
 
     public static int
@@ -119,5 +122,8 @@ public class TextureListener {
 
             EnergizedAlphium,
             PureAlphiumCompound,
-            PureAlphiumBlock;
+            PureAlphiumBlock,
+
+            StoneGardensGrassSide,
+            StoneGardensGrassTop;
 }

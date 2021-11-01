@@ -19,7 +19,7 @@ public class AlphiumHoe extends TemplateItemBase {
     @Override
     public boolean useOnTile(ItemInstance item, PlayerBase player, Level level, int x, int y, int z, int facing) {
         int idCheck = level.getTileId(x, y, z);
-        if (idCheck == BlockListener.skyDirt.id) {
+        if (idCheck == BlockListener.skyDirt.id || idCheck == BlockListener.skyGrass.id) {
             int metaCheck = level.getTileMeta(x, y, z);
             if (metaCheck < 5 && metaCheck > 0) {
                 level.placeBlockWithMetaData(x, y, z, BlockListener.skyDirt.id, 1 + metaCheck);

@@ -1,5 +1,6 @@
 package net.martin1912.upwardbound.events.init;
 
+import net.martin1912.upwardbound.structures.DirtReplacer;
 import net.martin1912.upwardbound.structures.SkyLootDungeon;
 import net.martin1912.upwardbound.structures.EnergiumiteCrystal;
 import net.mine_diver.unsafeevents.listener.EventListener;
@@ -28,6 +29,12 @@ public class ChunkListener {
                 int z = event.z + event.random.nextInt(16);
                 new SkyLootDungeon().generate(event.level, event.random, x, y, z);
             }
+        }
+        if (event.biome == Biome.SKY) {
+            int x = event.x;
+            int y = 127;
+            int z = event.z;
+            new DirtReplacer().generate(event.level, event.random, x, y, z);
         }
     }
 }
