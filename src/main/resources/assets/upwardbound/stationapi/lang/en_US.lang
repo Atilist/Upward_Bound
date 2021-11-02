@@ -14,7 +14,7 @@ item.dungeon_key_head.name=Dungeon Key Head
 item.sky_bean.name=Sky Bean
 item.robust_string.name=Robust String
 item.alphium_hoe.name=Alphium Hoe
-item.energiumite.name=Energiumite
+item.energiumite.name=Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz
 item.pure_alphium.name=Pure Alphium
 item.rod_of_dreams.name=Rod of Dreams
 
@@ -38,3 +38,5 @@ tile.processed_alphium2.name=Pure Alphium Block
 tile.sky_grass0.name=Stone Gardens Grass
 tile.sky_grass1.name=Cold Grass
 tile.sky_grass2.name=Lush Grass
+tile.sky_grass3.name=Balloon Grass
+tile.sky_grass4.name=Gold Grass

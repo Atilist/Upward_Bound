@@ -6,6 +6,7 @@ import net.minecraft.block.BlockBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.level.Level;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
+import net.modificationstation.stationapi.api.level.dimension.VanillaDimensions;
 import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
 
@@ -73,6 +74,30 @@ public class SkyGrass extends TemplateBlockBase {
                     case 5:
                         return TextureListener.LushGrassSide;
                 }
+            case 3:
+                switch (side) {
+                    case 0:
+                        return TextureListener.SkyDirt;
+                    case 1:
+                        return TextureListener.BalloonGrassTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.BalloonGrassSide;
+                }
+            case 4:
+                switch (side) {
+                    case 0:
+                        return TextureListener.SkyDirt;
+                    case 1:
+                        return TextureListener.GoldGrassTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.GoldGrassSide;
+                }
             default:
                 return super.getTextureForSide(side, meta);}
     }
@@ -95,7 +120,6 @@ public class SkyGrass extends TemplateBlockBase {
                     level.setTileWithMetadata(var6, var7, var8, BlockListener.skyGrass.id, level.getTileMeta(x, y, z));
                 }
             }
-
         }
     }
 }
