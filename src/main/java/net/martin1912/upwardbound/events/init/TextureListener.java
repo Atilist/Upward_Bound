@@ -91,6 +91,13 @@ public class TextureListener {
         LushLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/LushLog")).index;
         ColdLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/ColdLog")).index;
         GoldLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/GoldLog")).index;
+
+        ColdTallGrass = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdTallGrass")).index;
+        ColdBlueFlower = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdBlueFlower")).index;
+        ColdWhiteFlower = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdWhiteFlower")).index;
+        ColdTinyMushroom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdTinyMushroom")).index;
+        ColdBush = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdBush")).index;
+        ColdBushRipe = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdBushRipe")).index;
     }
 
     public static int
@@ -157,5 +164,12 @@ public class TextureListener {
 
             LushLog,
             ColdLog,
-            GoldLog;
+            GoldLog,
+
+            ColdTallGrass,
+            ColdBlueFlower,
+            ColdWhiteFlower,
+            ColdTinyMushroom,
+            ColdBush,
+            ColdBushRipe;
 }
