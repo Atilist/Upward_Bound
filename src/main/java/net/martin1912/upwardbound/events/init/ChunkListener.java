@@ -1,6 +1,6 @@
 package net.martin1912.upwardbound.events.init;
 
-import net.martin1912.upwardbound.structures.DirtReplacer;
+import net.martin1912.upwardbound.structures.BiomesDistributor;
 import net.martin1912.upwardbound.structures.SkyLootDungeon;
 import net.martin1912.upwardbound.structures.EnergiumiteCrystal;
 import net.mine_diver.unsafeevents.listener.EventListener;
@@ -34,7 +34,7 @@ public class ChunkListener {
             int x = event.x;
             int y = 127;
             int z = event.z;
-            new DirtReplacer().generate(event.level, event.random, x, y, z);
+            new BiomesDistributor().generate(event.level, event.random, x, y, z);
         }
     }
 }

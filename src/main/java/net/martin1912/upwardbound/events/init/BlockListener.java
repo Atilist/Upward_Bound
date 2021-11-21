@@ -23,7 +23,8 @@ public class BlockListener {
     public static TemplatePlant beanCrop;
     public static TemplateBlockBase processedAlphium;
     public static TemplateBlockBase skyGrass;
-
+    public static TemplateBlockBase skyLogs;
+    public static TemplateBlockBase skyLeaves;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -43,5 +44,7 @@ public class BlockListener {
         beanCrop = new BeanCrop(Identifier.of(MOD_ID, "bean_crop")).setTranslationKey(MOD_ID, "bean_crop");
         processedAlphium = new ProcessedAlphium(Identifier.of(MOD_ID, "processed_alphium"), Material.STONE).setHardness(1.5F).setTranslationKey(MOD_ID, "processed_alphium");
         skyGrass = new SkyGrass(Identifier.of(MOD_ID, "sky_grass"), Material.DIRT).setHardness(0.5F).setTranslationKey(MOD_ID, "sky_grass");
+        skyLogs = new SkyLogs(Identifier.of(MOD_ID, "sky_logs"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_logs");
+        skyLeaves = new SkyLeaves(Identifier.of(MOD_ID, "sky_leaves"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_leaves");
     }
 }

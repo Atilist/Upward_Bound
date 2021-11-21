@@ -83,6 +83,14 @@ public class TextureListener {
         BalloonGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassTop")).index;
         GoldGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/GoldGrassSide")).index;
         GoldGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/GoldGrassTop")).index;
+
+        LushLeaves = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/LushLeaves")).index;
+        ColdLeaves = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/ColdLeaves")).index;
+        GoldLeaves = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/GoldLeaves")).index;
+
+        LushLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/LushLog")).index;
+        ColdLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/ColdLog")).index;
+        GoldLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/GoldLog")).index;
     }
 
     public static int
@@ -141,5 +149,13 @@ public class TextureListener {
             BalloonGrassSide,
             BalloonGrassTop,
             GoldGrassSide,
-            GoldGrassTop;
+            GoldGrassTop,
+
+            LushLeaves,
+            ColdLeaves,
+            GoldLeaves,
+
+            LushLog,
+            ColdLog,
+            GoldLog;
 }
