@@ -1,15 +1,9 @@
 package net.martin1912.upwardbound.structures;
-
 import net.martin1912.upwardbound.events.init.BlockListener;
 import net.minecraft.block.BlockBase;
 import net.minecraft.level.Level;
-import net.minecraft.level.dimension.Dimension;
-import net.minecraft.level.dimension.DimensionData;
-import net.minecraft.level.gen.FixedBiomeSource;
 import net.minecraft.level.structure.Structure;
 import net.minecraft.util.noise.SimplexOctaveNoise;
-import net.modificationstation.stationapi.api.level.dimension.DimensionHelper;
-
 import java.util.Random;
 
 public class BiomesDistributor extends Structure {
@@ -20,7 +14,7 @@ public class BiomesDistributor extends Structure {
                 SimplexOctaveNoise pseudoBiome = new SimplexOctaveNoise(new Random(level.getSeed() * 1000L), 4);
                 double[] biomeVariable = new double[1];
                 biomeVariable = pseudoBiome.sample(biomeVariable, (double) x + xOffset, (double) z + zOffset, 16, 16, 0.02500000037252903D, 0.02500000037252903D, 0.5D);
-                System.out.println(biomeVariable[0]);
+                //System.out.println(biomeVariable[0]);
                 for (int height = y; height > 19; height--) {
                     TreePlacer treeThing = new TreePlacer();
                     int randomizer = rand.nextInt(20);
@@ -54,10 +48,10 @@ public class BiomesDistributor extends Structure {
                                 if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     treeThing.setMeta(1);
                                     treeThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
-                                } else if (randomizer >= 10 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                } else if (randomizer >= 15 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.coldPlants.id, rand.nextInt(6));
                                 }
-                            } else if (biomeVariable[0] < -1.5) { //Balloon Biome
+                            } else if (biomeVariable[0] < -1.25) { //Balloon Biome
                                 level.setTileWithMetadata(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id, 3);
                             } else if (biomeVariable[0] < 1.5){ //Stone Gardens
                                 level.setTile(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id);
@@ -66,6 +60,14 @@ public class BiomesDistributor extends Structure {
                                 if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     treeThing.setMeta(0);
                                     treeThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
+                                } else if (randomizer >= 5 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    int plantRandomizer = rand.nextInt(3);
+                                    if (plantRandomizer == 2) {
+                                        level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.lushPlants.id, 2);
+                                        level.setTileWithMetadata(x + xOffset, height + 2, z + zOffset, BlockListener.lushPlants.id, 3);
+                                    } else {
+                                        level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.lushPlants.id, plantRandomizer);
+                                    }
                                 }
                             } else if (biomeVariable[0] < 3.75) { //Golden Forest
                                 if (level.getTileId(x + xOffset, height + 1, z + zOffset) == BlockBase.SNOW.id)
@@ -74,6 +76,8 @@ public class BiomesDistributor extends Structure {
                                 if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     treeThing.setMeta(2);
                                     treeThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
+                                } else if (randomizer >= 10 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.goldPlants.id, rand.nextInt(3));
                                 }
                             } else {  //Sky Desert (Surface)
                                 if (level.getTileId(x + xOffset, height + 1, z + zOffset) == BlockBase.SNOW.id)

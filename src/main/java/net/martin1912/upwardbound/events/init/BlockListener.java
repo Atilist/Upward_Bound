@@ -26,6 +26,8 @@ public class BlockListener {
     public static TemplateBlockBase skyLogs;
     public static TemplateBlockBase skyLeaves;
     public static TemplateBlockBase coldPlants;
+    public static TemplateBlockBase lushPlants;
+    public static TemplateBlockBase goldPlants;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -48,5 +50,7 @@ public class BlockListener {
         skyLogs = new SkyLogs(Identifier.of(MOD_ID, "sky_logs"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_logs");
         skyLeaves = new SkyLeaves(Identifier.of(MOD_ID, "sky_leaves"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_leaves");
         coldPlants = new ColdPlants(Identifier.of(MOD_ID, "cold_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "cold_plants");
+        lushPlants = new LushPlants(Identifier.of(MOD_ID, "lush_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "lush_plants");
+        goldPlants = new GoldPlants(Identifier.of(MOD_ID, "gold_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "gold_plants");
     }
 }

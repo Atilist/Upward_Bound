@@ -31,7 +31,7 @@ public class TreePlacer {
                     int zShift = rand.nextInt(xzSize * -2) + xzSize;
                     for (int xOffset = xzSize; xOffset <= xzSize * -1; xOffset++) {
                         for (int zOffset = xzSize; zOffset <= xzSize * -1; zOffset++) {
-                            if (level.getTileId(x + xOffset + xShift, leavesHeight, z + zOffset + zShift) == 0) {
+                            if (level.getTileId(x + xOffset + xShift, leavesHeight + y, z + zOffset + zShift) == 0) {
                                 level.setTile(x + xOffset + xShift, leavesHeight + y, z + zOffset + zShift, BlockListener.skyLeaves.id);
                             }
                         }
@@ -138,7 +138,7 @@ public class TreePlacer {
                         }
                     }
                 }
-        }
+            }
         }
     public void setMeta(int pMeta) {
         meta = pMeta;

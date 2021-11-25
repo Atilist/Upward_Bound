@@ -98,6 +98,19 @@ public class TextureListener {
         ColdTinyMushroom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdTinyMushroom")).index;
         ColdBush = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdBush")).index;
         ColdBushRipe = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdBushRipe")).index;
+
+        LushTallGrass = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushTallGrass")).index;
+        LushFern = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushFern")).index;
+        LushBigFernBottom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushBigFernBottom")).index;
+        LushBigFernTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushBigFernTop")).index;
+        LushFernMiddle = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushFernMiddle")).index;
+        LushFernToTallGrass = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushFernToTallGrass")).index;
+        LushTallGrassMiddle = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushTallGrassMiddle")).index;
+        LushTallGrassToFern = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "LushPlants/LushTallGrassToFern")).index;
+
+        GoldTallGrass = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldTallGrass")).index;
+        GoldShrub = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldShrub")).index;
+        GoldLettuce = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldLettuce")).index;
     }
 
     public static int
@@ -171,5 +184,18 @@ public class TextureListener {
             ColdWhiteFlower,
             ColdTinyMushroom,
             ColdBush,
-            ColdBushRipe;
+            ColdBushRipe,
+
+            LushTallGrass,
+            LushFern,
+            LushBigFernBottom,
+            LushBigFernTop,
+            LushFernMiddle,
+            LushFernToTallGrass,
+            LushTallGrassMiddle,
+            LushTallGrassToFern,
+
+            GoldTallGrass,
+            GoldShrub,
+            GoldLettuce;
 }
