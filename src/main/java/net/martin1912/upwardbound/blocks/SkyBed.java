@@ -1,7 +1,7 @@
 package net.martin1912.upwardbound.blocks;
 
 import net.martin1912.upwardbound.events.init.ItemListener;
-import net.martin1912.upwardbound.travelagent.SkyTravelAgent;
+import net.martin1912.upwardbound.travelagent.SkyBedTravelAgent;
 import net.minecraft.class_467;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.level.Level;
@@ -265,7 +265,7 @@ public class SkyBed extends TemplateBed {
         return true;
     }
 
-    private final class_467 TravelBoi = new SkyTravelAgent();
+    private final class_467 TravelBoi = new SkyBedTravelAgent();
 
     @Override
     public int getDropId(int meta, Random rand) {

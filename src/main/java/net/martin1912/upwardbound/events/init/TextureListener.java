@@ -111,6 +111,12 @@ public class TextureListener {
         GoldTallGrass = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldTallGrass")).index;
         GoldShrub = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldShrub")).index;
         GoldLettuce = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldLettuce")).index;
+
+        SkyShroomBottom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomBottom")).index;
+        SkyShroomSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomSide")).index;
+        SkyShroomTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomTop")).index;
+        SkyShroomStem = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomStem")).index;
+        SkyShroomInside = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomInside")).index;
     }
 
     public static int
@@ -197,5 +203,11 @@ public class TextureListener {
 
             GoldTallGrass,
             GoldShrub,
-            GoldLettuce;
+            GoldLettuce,
+
+            SkyShroomBottom,
+            SkyShroomSide,
+            SkyShroomTop,
+            SkyShroomStem,
+            SkyShroomInside;
 }

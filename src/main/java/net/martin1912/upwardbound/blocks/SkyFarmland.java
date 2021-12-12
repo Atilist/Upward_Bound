@@ -3,7 +3,9 @@ package net.martin1912.upwardbound.blocks;
 import net.martin1912.upwardbound.events.init.BlockListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.animal.Cow;
 import net.minecraft.level.Level;
+import net.minecraft.level.dimension.Skylands;
 import net.minecraft.util.maths.Box;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
 import net.modificationstation.stationapi.api.registry.Identifier;
@@ -166,7 +168,6 @@ public class SkyFarmland extends TemplateBlockBase {
                 level.setTileMeta(x, y, z, 7);
             }
         }
-
     }
 
     private boolean isHydrated(Level arg, int x, int y, int z) {

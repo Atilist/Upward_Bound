@@ -48,8 +48,11 @@ public class BiomesDistributor extends Structure {
                                 if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     treeThing.setMeta(1);
                                     treeThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
-                                } else if (randomizer >= 15 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                } else if (randomizer >= 15 && randomizer != 19 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.coldPlants.id, rand.nextInt(6));
+                                } else if (randomizer == 19 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    SkyShroom skyShroomThing = new SkyShroom();
+                                    skyShroomThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
                                 }
                             } else if (biomeVariable[0] < -1.25) { //Balloon Biome
                                 level.setTileWithMetadata(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id, 3);

@@ -2,11 +2,20 @@ package net.martin1912.upwardbound.blocks;
 
 import net.martin1912.upwardbound.events.init.BlockListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
+import net.martin1912.upwardbound.skyseasons.SkySeasonsCalculator;
 import net.minecraft.block.BlockBase;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityBase;
+import net.minecraft.entity.animal.AnimalBase;
+import net.minecraft.entity.animal.Chicken;
+import net.minecraft.entity.animal.Cow;
 import net.minecraft.level.Level;
+import net.minecraft.level.dimension.DimensionData;
+import net.minecraft.level.dimension.Skylands;
+import net.minecraft.util.maths.Box;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
 import net.modificationstation.stationapi.api.level.dimension.VanillaDimensions;
+import net.modificationstation.stationapi.api.registry.DimensionRegistry;
 import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
 
@@ -14,6 +23,8 @@ import java.util.Random;
 
 @HasMetaNamedBlockItem
 public class SkyGrass extends TemplateBlockBase {
+    SkySeasonsCalculator seasonsCalculator = new SkySeasonsCalculator();
+
     public SkyGrass(Identifier identifier, Material material) {
         super(identifier, material);
         this.setTicksRandomly(true);
@@ -43,7 +54,18 @@ public class SkyGrass extends TemplateBlockBase {
                     case 0:
                         return TextureListener.SkyDirt;
                     case 1:
-                        return TextureListener.StoneGardensGrassTop;
+                        switch (seasons / 50) {
+                            case 0:
+                                return TextureListener.StoneGardensGrassTop;
+                            case 1:
+                                return TextureListener.SkyShroomStem;
+                            case 2:
+                                return TextureListener.SkyShroomSide;
+                            case 3:
+                                return TextureListener.SkyShroomBottom;
+                            case 4:
+                                return TextureListener.SkyShroomInside;
+                        }
                     case 2:
                     case 3:
                     case 4:
@@ -104,12 +126,20 @@ public class SkyGrass extends TemplateBlockBase {
 
     @Override
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {
+
+        seasons = seasonsCalculator.getDay(level.getLevelTime());
+        if (level.getTileId(x, y + 1, z) == 0 ) {
+            int selfMeta = level.getTileMeta(x, y, z);
+            level.placeBlockWithMetaData(x, y, z, 1, 0);
+            level.placeBlockWithMetaData(x, y, z, BlockListener.skyGrass.id, selfMeta);
+        }
+        System.out.println(seasons);
+        level.getLevelTime();
         if (!level.isClient) {
             if (level.placeTile(x, y + 1, z) < 4 && BlockBase.LIGHT_OPACITY[level.getTileId(x, y + 1, z)] > 2) {
                 if (rand.nextInt(4) != 0) {
                     return;
                 }
-
                 level.setTile(x, y, z, BlockListener.skyDirt.id);
             } else if (level.placeTile(x, y + 1, z) >= 9) {
                 int var6 = x + rand.nextInt(3) - 1;
@@ -120,6 +150,15 @@ public class SkyGrass extends TemplateBlockBase {
                     level.setTileWithMetadata(var6, var7, var8, BlockListener.skyGrass.id, level.getTileMeta(x, y, z));
                 }
             }
+            if (level.dimension instanceof Skylands && level.getTileMeta(x, y, z) == 0 && level.canSpawnEntity(Box.create(x - 1, y + 1, z - 1, x + 1, y + 2, z + 1))) {
+                Chicken moo = new Chicken(level);
+                int randomizer = rand.nextInt(1000);
+                if (randomizer == 0) {
+                    moo.setPosition(x + 0.5, y + 1, z + 0.5);
+                    level.spawnEntity(moo);
+                }
+            }
         }
     }
+    int seasons = 0;
 }

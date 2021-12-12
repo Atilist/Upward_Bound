@@ -7,7 +7,7 @@ import net.minecraft.entity.EntityBase;
 import net.minecraft.level.Level;
 import net.minecraft.util.maths.MathHelper;
 
-public class SkyTravelAgent extends class_467 {
+public class SkyBedTravelAgent extends class_467 {
 
     public void method_1530(Level arg, EntityBase arg1) {
         if (!this.method_1531(arg, arg1)) {
