@@ -58,6 +58,10 @@ public class BiomesDistributor extends Structure {
                                 level.setTileWithMetadata(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id, 3);
                             } else if (biomeVariable[0] < 1.5){ //Stone Gardens
                                 level.setTile(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id);
+                                if (rand.nextInt(250) == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    StoneGardensRock stoneGardensRock = new StoneGardensRock();
+                                    stoneGardensRock.buildRock(level, x + xOffset, height + 1, z + zOffset, rand);
+                                }
                             } else if (biomeVariable[0] < 3.0) { //Lush Forest
                                 level.setTileWithMetadata(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id, 2);
                                 if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {

@@ -21,14 +21,15 @@ public class BlockListener {
     public static TemplateBlockBase skyDirt;
     public static TemplateBlockBase skyFarmland;
     public static TemplatePlant beanCrop;
-    public static TemplateBlockBase processedAlphium;
-    public static TemplateBlockBase skyGrass;
-    public static TemplateBlockBase skyLogs;
-    public static TemplateBlockBase skyLeaves;
-    public static TemplateBlockBase coldPlants;
-    public static TemplateBlockBase lushPlants;
-    public static TemplateBlockBase goldPlants;
-    public static TemplateBlockBase skyShroom;
+    public static TemplateBlockBase processedAlphium,
+                                    skyGrass,
+                                    skyLogs,
+                                    skyLeaves,
+                                    coldPlants,
+                                    lushPlants,
+                                    goldPlants,
+                                    skyShroom,
+                                    stoneGrass;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -54,5 +55,6 @@ public class BlockListener {
         lushPlants = new LushPlants(Identifier.of(MOD_ID, "lush_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "lush_plants");
         goldPlants = new GoldPlants(Identifier.of(MOD_ID, "gold_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "gold_plants");
         skyShroom = new SkyShroom(Identifier.of(MOD_ID, "sky_shroom"), Material.WOOD).setHardness(0.5F).setTranslationKey(MOD_ID, "sky_shroom");
+        stoneGrass = new StoneGrass(Identifier.of(MOD_ID, "stone_grass"), Material.STONE).setHardness(1.5F).setTranslationKey(MOD_ID, "stone_grass");
     }
 }

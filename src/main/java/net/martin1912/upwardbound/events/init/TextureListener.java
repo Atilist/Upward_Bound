@@ -74,13 +74,43 @@ public class TextureListener {
         PureAlphiumBlock = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ProcessedAlphium/PureAlphiumBlock")).index;
 
         StoneGardensGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassSide")).index;
+        StoneGardensGrassSideDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassSideDrought")).index;
+        StoneGardensGrassSideAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassSideAncient")).index;
+        StoneGardensGrassSideStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassSideStorm")).index;
+
         StoneGardensGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTop")).index;
+        StoneGardensGrassTopBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTopBloom")).index;
+        StoneGardensGrassTopDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTopDrought")).index;
+        StoneGardensGrassTopAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTopAncient")).index;
+        StoneGardensGrassTopStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGardensGrassTopStorm")).index;
+
         ColdGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassSide")).index;
+        ColdGrassSideDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassSideDrought")).index;
+        ColdGrassSideAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassSideAncient")).index;
+        ColdGrassSideStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassSideStorm")).index;
         ColdGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassTop")).index;
+        ColdGrassTopBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassTopBloom")).index;
+        ColdGrassTopDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassTopDrought")).index;
+        ColdGrassTopAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassTopAncient")).index;
+        ColdGrassTopStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/ColdGrassTopStorm")).index;
         LushGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassSide")).index;
+        LushGrassSideDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassSideDrought")).index;
+        LushGrassSideAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassSideAncient")).index;
+        LushGrassSideStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassSideStorm")).index;
         LushGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassTop")).index;
+        LushGrassTopBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassTopBloom")).index;
+        LushGrassTopDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassTopDrought")).index;
+        LushGrassTopAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassTopAncient")).index;
+        LushGrassTopStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/LushGrassTopStorm")).index;
         BalloonGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassSide")).index;
+        BalloonGrassSideDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassSideDrought")).index;
+        BalloonGrassSideAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassSideAncient")).index;
+        BalloonGrassSideStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassSideStorm")).index;
         BalloonGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassTop")).index;
+        BalloonGrassTopBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassTopBloom")).index;
+        BalloonGrassTopDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassTopDrought")).index;
+        BalloonGrassTopAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassTopAncient")).index;
+        BalloonGrassTopStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/BalloonGrassTopStorm")).index;
         GoldGrassSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/GoldGrassSide")).index;
         GoldGrassTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/GoldGrassTop")).index;
 
@@ -117,6 +147,8 @@ public class TextureListener {
         SkyShroomTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomTop")).index;
         SkyShroomStem = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomStem")).index;
         SkyShroomInside = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomInside")).index;
+
+        StoneGrassGardensSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGrassGardensSide")).index;
     }
 
     public static int
@@ -167,13 +199,41 @@ public class TextureListener {
             PureAlphiumBlock,
 
             StoneGardensGrassSide,
+            StoneGardensGrassSideDrought,
+            StoneGardensGrassSideAncient,
+            StoneGardensGrassSideStorm,
             StoneGardensGrassTop,
+            StoneGardensGrassTopBloom,
+            StoneGardensGrassTopDrought,
+            StoneGardensGrassTopAncient,
+            StoneGardensGrassTopStorm,
             ColdGrassSide,
+            ColdGrassSideDrought,
+            ColdGrassSideAncient,
+            ColdGrassSideStorm,
             ColdGrassTop,
+            ColdGrassTopBloom,
+            ColdGrassTopDrought,
+            ColdGrassTopAncient,
+            ColdGrassTopStorm,
             LushGrassSide,
+            LushGrassSideDrought,
+            LushGrassSideAncient,
+            LushGrassSideStorm,
             LushGrassTop,
+            LushGrassTopBloom,
+            LushGrassTopDrought,
+            LushGrassTopAncient,
+            LushGrassTopStorm,
             BalloonGrassSide,
+            BalloonGrassSideDrought,
+            BalloonGrassSideAncient,
+            BalloonGrassSideStorm,
             BalloonGrassTop,
+            BalloonGrassTopBloom,
+            BalloonGrassTopDrought,
+            BalloonGrassTopAncient,
+            BalloonGrassTopStorm,
             GoldGrassSide,
             GoldGrassTop,
 
@@ -209,5 +269,7 @@ public class TextureListener {
             SkyShroomSide,
             SkyShroomTop,
             SkyShroomStem,
-            SkyShroomInside;
+            SkyShroomInside,
+
+            StoneGrassGardensSide;
 }

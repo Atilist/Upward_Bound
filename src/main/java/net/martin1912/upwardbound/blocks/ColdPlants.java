@@ -6,6 +6,7 @@ import net.martin1912.upwardbound.events.init.BlockListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.minecraft.block.BlockBase;
 import net.minecraft.block.material.Material;
+import net.minecraft.level.BlockView;
 import net.minecraft.level.Level;
 import net.minecraft.util.maths.Box;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;

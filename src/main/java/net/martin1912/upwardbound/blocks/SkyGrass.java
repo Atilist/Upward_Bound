@@ -58,55 +58,128 @@ public class SkyGrass extends TemplateBlockBase {
                             case 0:
                                 return TextureListener.StoneGardensGrassTop;
                             case 1:
-                                return TextureListener.SkyShroomStem;
+                                return TextureListener.StoneGardensGrassTopBloom;
                             case 2:
-                                return TextureListener.SkyShroomSide;
+                                return TextureListener.StoneGardensGrassTopDrought;
                             case 3:
-                                return TextureListener.SkyShroomBottom;
+                                return TextureListener.StoneGardensGrassTopAncient;
                             case 4:
-                                return TextureListener.SkyShroomInside;
+                                return TextureListener.StoneGardensGrassTopStorm;
                         }
                     case 2:
                     case 3:
                     case 4:
                     case 5:
-                        return TextureListener.StoneGardensGrassSide;
+                        switch (seasons / 50) {
+                            case 0:
+                            case 1:
+                                return TextureListener.StoneGardensGrassSide;
+                            case 2:
+                                return TextureListener.StoneGardensGrassSideDrought;
+                            case 3:
+                                return TextureListener.StoneGardensGrassSideAncient;
+                            case 4:
+                                return TextureListener.StoneGardensGrassSideStorm;
+                        }
                 }
             case 1:
                 switch (side) {
                     case 0:
                         return TextureListener.SkyDirt;
                     case 1:
-                        return TextureListener.ColdGrassTop;
+                        switch (seasons / 50) {
+                            case 0:
+                                return TextureListener.ColdGrassTop;
+                            case 1:
+                                return TextureListener.ColdGrassTopBloom;
+                            case 2:
+                                return TextureListener.ColdGrassTopDrought;
+                            case 3:
+                                return TextureListener.ColdGrassTopAncient;
+                            case 4:
+                                return TextureListener.ColdGrassTopStorm;
+                        }
                     case 2:
                     case 3:
                     case 4:
                     case 5:
-                        return TextureListener.ColdGrassSide;
+                        switch (seasons / 50) {
+                            case 0:
+                            case 1:
+                                return TextureListener.ColdGrassSide;
+                            case 2:
+                                return TextureListener.ColdGrassSideDrought;
+                            case 3:
+                                return TextureListener.ColdGrassSideAncient;
+                            case 4:
+                                return TextureListener.ColdGrassSideStorm;
+                        }
                 }
             case 2:
                 switch (side) {
                     case 0:
                         return TextureListener.SkyDirt;
                     case 1:
-                        return TextureListener.LushGrassTop;
+                        switch (seasons / 50) {
+                            case 0:
+                                return TextureListener.LushGrassTop;
+                            case 1:
+                                return TextureListener.LushGrassTopBloom;
+                            case 2:
+                                return TextureListener.LushGrassTopDrought;
+                            case 3:
+                                return TextureListener.LushGrassTopAncient;
+                            case 4:
+                                return TextureListener.LushGrassTopStorm;
+                        }
                     case 2:
                     case 3:
                     case 4:
                     case 5:
-                        return TextureListener.LushGrassSide;
+                        switch (seasons / 50) {
+                            case 0:
+                            case 1:
+                                return TextureListener.LushGrassSide;
+                            case 2:
+                                return TextureListener.LushGrassSideDrought;
+                            case 3:
+                                return TextureListener.LushGrassSideAncient;
+                            case 4:
+                                return TextureListener.LushGrassSideStorm;
+                        }
                 }
             case 3:
                 switch (side) {
                     case 0:
                         return TextureListener.SkyDirt;
                     case 1:
-                        return TextureListener.BalloonGrassTop;
+                        switch (seasons / 50) {
+                            case 0:
+                                return TextureListener.BalloonGrassTop;
+                            case 1:
+                                return TextureListener.BalloonGrassTopBloom;
+                            case 2:
+                                return TextureListener.BalloonGrassTopDrought;
+                            case 3:
+                                return TextureListener.BalloonGrassTopAncient;
+                            case 4:
+                                return TextureListener.BalloonGrassTopStorm;
+                        }
                     case 2:
                     case 3:
                     case 4:
                     case 5:
-                        return TextureListener.BalloonGrassSide;
+                        switch (seasons / 50) {
+                            case 0:
+                            case 1:
+                                return TextureListener.BalloonGrassSide;
+                            case 2:
+                                return TextureListener.BalloonGrassSideDrought;
+                            case 3:
+                                return TextureListener.BalloonGrassSideAncient;
+                            case 4:
+                                return TextureListener.BalloonGrassSideStorm;
+                        }
                 }
             case 4:
                 switch (side) {
