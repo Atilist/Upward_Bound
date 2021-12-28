@@ -248,12 +248,12 @@ public class SkyBed extends TemplateBed {
                 SleepStatus var15 = player.trySleep(x, y, z);
                 if (var15 == SleepStatus.OK) {
                     player.wakeUp(true, true, true);
-                    DimensionHelper.switchDimension(player, VanillaDimensions.SKYLANDS, 1.0, TravelBoi , "Ascending to the Skylands", "Waking up from the Skylands");
+                    DimensionHelper.switchDimension(player, VanillaDimensions.SKYLANDS, 1.0, TravelBoi);
                 } else {
                     if (var15 == SleepStatus.DAY_TIME) {
                         if (player.dimensionId == DimensionRegistry.INSTANCE.getSerialID(VanillaDimensions.SKYLANDS).orElseThrow(RuntimeException::new)) {
                             player.wakeUp(true, true, true);
-                            DimensionHelper.switchDimension(player, VanillaDimensions.SKYLANDS, 1.0, TravelBoi , "Ascending to the Skylands", "Waking up from the Skylands");
+                            DimensionHelper.switchDimension(player, VanillaDimensions.SKYLANDS, 1.0, TravelBoi);
                         } else {
                             player.sendMessage("tile.bed.noSleep");
                         }

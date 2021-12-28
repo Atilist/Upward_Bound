@@ -24,7 +24,7 @@ import java.util.Random;
 @HasMetaNamedBlockItem
 public class SkyGrass extends TemplateBlockBase {
     SkySeasonsCalculator seasonsCalculator = new SkySeasonsCalculator();
-
+    int seasons = 0;
     public SkyGrass(Identifier identifier, Material material) {
         super(identifier, material);
         this.setTicksRandomly(true);
@@ -186,12 +186,33 @@ public class SkyGrass extends TemplateBlockBase {
                     case 0:
                         return TextureListener.SkyDirt;
                     case 1:
-                        return TextureListener.GoldGrassTop;
+                        switch (seasons / 50) {
+                            case 0:
+                                return TextureListener.GoldGrassTop;
+                            case 1:
+                                return TextureListener.GoldGrassTopBloom;
+                            case 2:
+                                return TextureListener.GoldGrassTopDrought;
+                            case 3:
+                                return TextureListener.GoldGrassTopAncient;
+                            case 4:
+                                return TextureListener.GoldGrassTopStorm;
+                        }
                     case 2:
                     case 3:
                     case 4:
                     case 5:
-                        return TextureListener.GoldGrassSide;
+                        switch (seasons / 50) {
+                            case 0:
+                            case 1:
+                                return TextureListener.GoldGrassSide;
+                            case 2:
+                                return TextureListener.GoldGrassSideDrought;
+                            case 3:
+                                return TextureListener.GoldGrassSideAncient;
+                            case 4:
+                                return TextureListener.GoldGrassSideStorm;
+                        }
                 }
             default:
                 return super.getTextureForSide(side, meta);}
@@ -201,7 +222,7 @@ public class SkyGrass extends TemplateBlockBase {
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {
 
         seasons = seasonsCalculator.getDay(level.getLevelTime());
-        if (level.getTileId(x, y + 1, z) == 0 ) {
+        if (level.getTileId(x, y + 1, z) == 0 && rand.nextInt(10) == 0) {
             int selfMeta = level.getTileMeta(x, y, z);
             level.placeBlockWithMetaData(x, y, z, 1, 0);
             level.placeBlockWithMetaData(x, y, z, BlockListener.skyGrass.id, selfMeta);
@@ -233,5 +254,4 @@ public class SkyGrass extends TemplateBlockBase {
             }
         }
     }
-    int seasons = 0;
 }

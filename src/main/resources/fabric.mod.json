@@ -42,6 +42,6 @@
 
   "depends": {
     "minecraft": "1.0.0-beta.7.3",
-    "betaextras": "1.0.0pre1"
+    "betaextras": ">=1.0.1"
   }
 }

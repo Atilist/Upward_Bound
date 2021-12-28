@@ -17,6 +17,7 @@ public class BiomesDistributor extends Structure {
                 //System.out.println(biomeVariable[0]);
                 for (int height = y; height > 19; height--) {
                     TreePlacer treeThing = new TreePlacer();
+                    BalloonShroom balloonShroom = new BalloonShroom();
                     int randomizer = rand.nextInt(20);
                     if (level.getTileId(x + xOffset, height, z + zOffset) == BlockBase.DIRT.id) {
                         if (height < 72) { //Grassy Biomes (Ground)
@@ -56,6 +57,11 @@ public class BiomesDistributor extends Structure {
                                 }
                             } else if (biomeVariable[0] < -1.25) { //Balloon Biome
                                 level.setTileWithMetadata(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id, 3);
+                                if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    balloonShroom.buildShroom(level, x + xOffset, height + 1, z + zOffset, rand);
+                                } else if (randomizer >= 15 && randomizer != 19 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.thinBalloonShroom.id, 0);
+                                }
                             } else if (biomeVariable[0] < 1.5){ //Stone Gardens
                                 level.setTile(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id);
                                 if (rand.nextInt(250) == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {

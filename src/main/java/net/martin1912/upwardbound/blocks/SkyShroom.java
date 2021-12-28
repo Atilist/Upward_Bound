@@ -24,7 +24,10 @@ public class SkyShroom extends TemplateBlockBase {
 
     @Override
     public int droppedMeta(int i) {
-        return 3;
+        if (i != 2) {
+            return 3;
+        }
+        return i;
     }
 
     @Override
@@ -53,12 +56,17 @@ public class SkyShroom extends TemplateBlockBase {
                     case 5:
                         return TextureListener.SkyShroomSide;
                 }
+            case 2:
+                return TextureListener.BalloonBlock;
             default:
                 return super.getTextureForSide(side, meta);
         }
     }
 
     public int getDropId(int meta, Random rand) {
-        return BlockListener.coldPlants.id;
+        if (meta != 2) {
+            return BlockListener.coldPlants.id;
+        }
+        return BlockListener.skyShroom.id;
     }
 }
