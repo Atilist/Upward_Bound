@@ -186,10 +186,25 @@ public class TextureListener {
         GoldLettuce = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "GoldPlants/GoldLettuce")).index;
 
         SkyShroomBottom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomBottom")).index;
+        SkyShroomBottomBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomBottomBloom")).index;
+        SkyShroomBottomAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomBottomAncient")).index;
+        SkyShroomBottomStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomBottomStorm")).index;
         SkyShroomSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomSide")).index;
+        SkyShroomSideBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomSideBloom")).index;
+        SkyShroomSideDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomSideDrought")).index;
+        SkyShroomSideAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomSideAncient")).index;
+        SkyShroomSideStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomSideStorm")).index;
         SkyShroomTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomTop")).index;
+        SkyShroomTopDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomTopDrought")).index;
+        SkyShroomTopAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomTopAncient")).index;
+        SkyShroomTopStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomTopStorm")).index;
         SkyShroomStem = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomStem")).index;
+        SkyShroomStemDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomStemDrought")).index;
+        SkyShroomStemAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomStemAncient")).index;
+        SkyShroomStemStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomStemStorm")).index;
         SkyShroomInside = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomInside")).index;
+        SkyShroomInsideAncient = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomInsideAncient")).index;
+        SkyShroomInsideStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyShroom/SkyShroomInsideStorm")).index;
 
         StoneGrassGardensSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGrassGardensSide")).index;
         StoneGrassGardensSideDrought = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFoliage/StoneGrassGardensSideDrought")).index;
@@ -361,10 +376,25 @@ public class TextureListener {
             GoldLettuce,
 
             SkyShroomBottom,
+            SkyShroomBottomBloom,
+            SkyShroomBottomAncient,
+            SkyShroomBottomStorm,
             SkyShroomSide,
+            SkyShroomSideBloom,
+            SkyShroomSideDrought,
+            SkyShroomSideAncient,
+            SkyShroomSideStorm,
             SkyShroomTop,
+            SkyShroomTopDrought,
+            SkyShroomTopAncient,
+            SkyShroomTopStorm,
             SkyShroomStem,
+            SkyShroomStemDrought,
+            SkyShroomStemAncient,
+            SkyShroomStemStorm,
             SkyShroomInside,
+            SkyShroomInsideAncient,
+            SkyShroomInsideStorm,
 
             StoneGrassGardensSide,
             StoneGrassGardensSideDrought,
