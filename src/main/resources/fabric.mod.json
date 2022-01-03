@@ -27,10 +27,10 @@
       "net.martin1912.upwardbound.events.init.ChunkListener"
     ],
     "stationapi:event_bus_client": [
-      "net.martin1912.upwardbound.events.init.ModelListener",
       "net.martin1912.upwardbound.events.init.KeyBindingListener",
       "net.martin1912.upwardbound.events.init.TextureListener",
-      "net.martin1912.upwardbound.events.ingame.KeyPressedListener"
+      "net.martin1912.upwardbound.events.ingame.KeyPressedListener",
+      "net.martin1912.upwardbound.events.init.ModelListener"
     ],
     "stationapi:event_bus_server": [
       "net.martin1912.upwardbound.events.init.ServerInitListener"

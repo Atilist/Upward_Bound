@@ -1,11 +1,12 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
     "textures": {
-        "skystemnarrow": "minecraft:/skystemnarrow",
-        "skysteminsidenarrow": "minecraft:/skysteminsidenarrow",
-        "skybottom": "minecraft:/skybottom",
-        "skyhatsidepremature": "minecraft:/skyhatsidepremature",
-        "skytop": "minecraft:/skytop"
+        "skystemnarrow": "upwardbound:skystemnarrow",
+        "skysteminsidenarrow": "upwardbound:skysteminsidenarrow",
+        "skybottom": "upwardbound:skybottom",
+        "skyhatsidepremature": "upwardbound:skyhatsidepremature",
+        "skytop": "upwardbound:skytop",
+	"particle": "upwardbound:skytop"
     },
     "display": {
         "gui": {

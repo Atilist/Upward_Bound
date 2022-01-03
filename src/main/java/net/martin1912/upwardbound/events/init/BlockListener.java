@@ -30,7 +30,8 @@ public class BlockListener {
                                     goldPlants,
                                     skyShroom,
                                     stoneGrass,
-                                    thinBalloonShroom;
+                                    thinBalloonShroom,
+                                    mediumSkyShroom;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -58,5 +59,6 @@ public class BlockListener {
         skyShroom = new SkyShroom(Identifier.of(MOD_ID, "sky_shroom"), Material.WOOD).setHardness(0.5F).setTranslationKey(MOD_ID, "sky_shroom");
         stoneGrass = new StoneGrass(Identifier.of(MOD_ID, "stone_grass"), Material.STONE).setHardness(1.5F).setTranslationKey(MOD_ID, "stone_grass");
         thinBalloonShroom = new ThinBalloonShroom(Identifier.of(MOD_ID, "thin_balloon_shroom"), Material.PLANT).setHardness(0.25F).setTranslationKey(MOD_ID, "thin_balloon_shroom");
+        mediumSkyShroom = new MediumSkyShroom(Identifier.of(MOD_ID, "medium_sky_shroom"), Material.PLANT).setHardness(0.5F).setTranslationKey(MOD_ID, "medium_sky_shroom");
     }
 }

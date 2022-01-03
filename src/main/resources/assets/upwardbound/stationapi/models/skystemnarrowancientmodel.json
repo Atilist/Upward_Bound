@@ -1,12 +1,9 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
     "textures": {
-        "skyhattopancient": "upwardbound:skyhattopancient",
-        "skybottomancient": "upwardbound:skybottomancient",
         "skystemnarrowancient": "upwardbound:skystemnarrowancient",
         "skysteminsidenarrowancient": "upwardbound:skysteminsidenarrowancient",
-        "skyhatsideancient": "upwardbound:skyhatsideancient",
-	"particle": "upwardbound:skyhattopancient"
+	"particle": "upwardbound:skystemnarrowancient"
     },
     "display": {
         "gui": {
@@ -44,26 +41,14 @@
         {
             "name": "Cube",
             "from": [ 5, 0, 5 ], 
-            "to": [ 11, 10, 11 ], 
+            "to": [ 11, 16, 11 ], 
             "faces": {
-                "north": { "texture": "#skystemnarrowancient", "uv": [ 5, 6, 11, 16 ] },
-                "east": { "texture": "#skystemnarrowancient", "uv": [ 5, 6, 11, 16 ] },
-                "south": { "texture": "#skystemnarrowancient", "uv": [ 5, 6, 11, 16 ] },
-                "west": { "texture": "#skystemnarrowancient", "uv": [ 5, 6, 11, 16 ] },
+                "north": { "texture": "#skystemnarrowancient", "uv": [ 5, 0, 11, 16 ] },
+                "east": { "texture": "#skystemnarrowancient", "uv": [ 5, 0, 11, 16 ] },
+                "south": { "texture": "#skystemnarrowancient", "uv": [ 5, 0, 11, 16 ] },
+                "west": { "texture": "#skystemnarrowancient", "uv": [ 5, 0, 11, 16 ] },
+                "up": { "texture": "#skysteminsidenarrowancient", "uv": [ 5, 5, 11, 11 ] },
                 "down": { "texture": "#skysteminsidenarrowancient", "uv": [ 5, 5, 11, 11 ] }
-            }
-        },
-        {
-            "name": "Cube",
-            "from": [ 0, 10, 0 ], 
-            "to": [ 16, 16, 16 ], 
-            "faces": {
-                "north": { "texture": "#skyhatsideancient", "uv": [ 0, 0, 16, 6 ] },
-                "east": { "texture": "#skyhatsideancient", "uv": [ 0, 0, 16, 6 ] },
-                "south": { "texture": "#skyhatsideancient", "uv": [ 0, 0, 16, 6 ] },
-                "west": { "texture": "#skyhatsideancient", "uv": [ 0, 0, 16, 6 ] },
-                "up": { "texture": "#skyhattopancient", "uv": [ 0, 0, 16, 16 ] },
-                "down": { "texture": "#skybottomancient", "uv": [ 0, 0, 16, 16 ] }
             }
         }
     ]
