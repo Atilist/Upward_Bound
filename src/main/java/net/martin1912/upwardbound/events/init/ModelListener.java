@@ -19,7 +19,10 @@ public class ModelListener {
                         skyHatPrematureBloomBlockModel,
                         skyHatPrematureDroughtBlockModel,
                         skyHatPrematureAncientBlockModel,
-                        skyHatPrematureStormBlockModel;
+                        skyHatPrematureStormBlockModel,
+
+                        balloonStemNarrowBlockModel,
+                        balloonStemNarrowVinesBlockModel;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -36,5 +39,8 @@ public class ModelListener {
         skyHatPrematureDroughtBlockModel = get(of(MOD_ID, "skyhatprematuredroughtmodel"));
         skyHatPrematureAncientBlockModel = get(of(MOD_ID, "skyhatprematureancientmodel"));
         skyHatPrematureStormBlockModel = get(of(MOD_ID, "skyhatprematurestormmodel"));
+
+        balloonStemNarrowBlockModel = get(of(MOD_ID, "balloonstemnarrowmodel"));
+        balloonStemNarrowVinesBlockModel = get(of(MOD_ID, "balloonstemnarrowvinesmodel"));
     }
 }

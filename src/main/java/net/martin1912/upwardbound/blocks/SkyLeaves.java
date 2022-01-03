@@ -13,7 +13,6 @@ import java.util.Random;
 
 @HasMetaNamedBlockItem
 public class SkyLeaves extends TemplateBlockBase {
-    SkySeasonsCalculator seasonsCalculator = new SkySeasonsCalculator();
     public SkyLeaves(Identifier identifier, Material material) {
         super(identifier, material);
         setSounds(GRASS.sounds);
@@ -85,7 +84,7 @@ public class SkyLeaves extends TemplateBlockBase {
 
     @Override
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {
-        seasons = seasonsCalculator.getDay(level.getLevelTime());
+        seasons = SkySeasonsCalculator.getDay(level.getLevelTime());
         if (level.getTileId(x, y + 1, z) == 0 && rand.nextInt(10) == 0) {
             int selfMeta = level.getTileMeta(x, y, z);
             level.placeBlockWithMetaData(x, y, z, 1, 0);

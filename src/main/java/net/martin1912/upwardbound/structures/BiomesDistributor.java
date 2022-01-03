@@ -49,8 +49,10 @@ public class BiomesDistributor extends Structure {
                                 if (randomizer == 0 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     treeThing.setMeta(1);
                                     treeThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
-                                } else if (randomizer >= 15 && randomizer != 19 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                } else if (randomizer >= 15 && randomizer < 18 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.coldPlants.id, rand.nextInt(6));
+                                } else if (randomizer == 18 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    MediumSkyShroom.generate(level, rand, x + xOffset, height + 1, z + zOffset);
                                 } else if (randomizer == 19 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     SkyShroom skyShroomThing = new SkyShroom();
                                     skyShroomThing.generate(level, rand, x + xOffset, height + 1, z + zOffset);
@@ -61,6 +63,8 @@ public class BiomesDistributor extends Structure {
                                     balloonShroom.buildShroom(level, x + xOffset, height + 1, z + zOffset, rand);
                                 } else if (randomizer >= 15 && randomizer != 19 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     level.setTileWithMetadata(x + xOffset, height + 1, z + zOffset, BlockListener.thinBalloonShroom.id, 0);
+                                } else if (level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    BigBalloonShroom.generate(level, rand, x + xOffset, height + 1, z + zOffset);
                                 }
                             } else if (biomeVariable[0] < 1.5){ //Stone Gardens
                                 level.setTile(x + xOffset, height, z + zOffset, BlockListener.skyGrass.id);

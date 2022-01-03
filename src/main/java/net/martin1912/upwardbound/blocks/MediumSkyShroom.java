@@ -4,6 +4,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.martin1912.upwardbound.events.init.BlockListener;
 import net.martin1912.upwardbound.events.init.ModelListener;
+import net.martin1912.upwardbound.events.init.TextureListener;
 import net.martin1912.upwardbound.skyseasons.SkySeasonsCalculator;
 import net.minecraft.block.material.Material;
 import net.minecraft.level.BlockView;
@@ -105,6 +106,10 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
                     case 4:
                         return ModelListener.skyHatPrematureStormBlockModel;
                 }
+            case 2:
+                return ModelListener.balloonStemNarrowBlockModel;
+            case 3:
+                return ModelListener.balloonStemNarrowVinesBlockModel;
             default:
                 return ModelListener.skyStemNarrowBlockModel;
         }
@@ -112,7 +117,7 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
 
     @Override
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {
-        seasons = seasonsCalculator.getDay(level.getLevelTime());
+        seasons = SkySeasonsCalculator.getDay(level.getLevelTime());
         if (level.getTileId(x, y + 1, z) == 0 && rand.nextInt(10) == 0) {
             int selfMeta = level.getTileMeta(x, y, z);
             level.placeBlockWithMetaData(x, y, z, 1, 0);
@@ -126,5 +131,4 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
     }
 
     int seasons = 0;
-    SkySeasonsCalculator seasonsCalculator = new SkySeasonsCalculator();
 }

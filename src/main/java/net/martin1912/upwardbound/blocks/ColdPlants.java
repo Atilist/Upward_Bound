@@ -134,7 +134,7 @@ public class ColdPlants extends TemplateBlockBase {
     @Override
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {
         this.breakIfIncorrect(level, x, y, z);
-        seasons = seasonsCalculator.getDay(level.getLevelTime());
+        seasons = SkySeasonsCalculator.getDay(level.getLevelTime());
         if (level.getTileId(x, y + 1, z) == 0 && rand.nextInt(10) == 0) {
             int selfMeta = level.getTileMeta(x, y, z);
             level.placeBlockWithMetaData(x, y, z, 1, 0);
@@ -177,5 +177,4 @@ public class ColdPlants extends TemplateBlockBase {
     }
 
     int seasons = 0;
-    SkySeasonsCalculator seasonsCalculator = new SkySeasonsCalculator();
 }
