@@ -30,7 +30,7 @@ public class SkyShroom extends TemplateBlockBase {
         if (i != 2) {
             return 3;
         }
-        return i;
+        return 0;
     }
 
     @Override

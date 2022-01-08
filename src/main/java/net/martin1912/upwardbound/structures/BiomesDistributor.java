@@ -14,7 +14,6 @@ public class BiomesDistributor extends Structure {
                 SimplexOctaveNoise pseudoBiome = new SimplexOctaveNoise(new Random(level.getSeed() * 1000L), 4);
                 double[] biomeVariable = new double[1];
                 biomeVariable = pseudoBiome.sample(biomeVariable, (double) x + xOffset, (double) z + zOffset, 16, 16, 0.02500000037252903D, 0.02500000037252903D, 0.5D);
-                //System.out.println(biomeVariable[0]);
                 for (int height = y; height > 19; height--) {
                     TreePlacer treeThing = new TreePlacer();
                     BalloonShroom balloonShroom = new BalloonShroom();
@@ -100,6 +99,9 @@ public class BiomesDistributor extends Structure {
                                 if (level.getTileId(x + xOffset, height + 1, z + zOffset) == BlockBase.SNOW.id)
                                     level.setTile(x + xOffset, height + 1, z + zOffset, 0);
                                 level.setTile(x + xOffset, height, z + zOffset, BlockBase.SAND.id);
+                                if (randomizer == 0) {
+                                    GravelPatch.generate(level, rand, x + xOffset, height, z + zOffset);
+                                }
                             }
                         } else {
                             if (height < 95) { //Mountain Slopes (Surface)

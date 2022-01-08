@@ -33,7 +33,9 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
 
     @Override
     public int droppedMeta(int i){
-        return 3;
+        if (i < 2)
+            return 3;
+        return 0;
     }
 
     @Override
@@ -127,7 +129,9 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
 
     @Override
     public int getDropId(int meta, Random rand) {
-        return BlockListener.coldPlants.id;
+        if (meta < 2)
+            return BlockListener.coldPlants.id;
+        return BlockListener.thinBalloonShroom.id;
     }
 
     int seasons = 0;

@@ -30,7 +30,7 @@ public class ThinBalloonShroom extends TemplateBlockBase {
 
     @Override
     public int droppedMeta(int i) {
-        return i;
+        return 0;
     }
 
     @Override

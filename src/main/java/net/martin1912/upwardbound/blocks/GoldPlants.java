@@ -39,6 +39,7 @@ public class GoldPlants extends TemplateBlockBase {
                 return super.getTextureForSide(side, meta);}
     }
 
+    @Override
     public boolean canPlaceAt(Level level, int x, int y, int z) {
         return super.canPlaceAt(level, x, y, z) && this.canPlantOnTopOf(level.getTileId(x, y - 1, z));
     }
@@ -47,11 +48,13 @@ public class GoldPlants extends TemplateBlockBase {
         return id == BlockListener.skyGrass.id || id == BlockListener.skyDirt.id || id == BlockListener.skyFarmland.id;
     }
 
+    @Override
     public void onAdjacentBlockUpdate(Level level, int x, int y, int z, int id) {
         super.onAdjacentBlockUpdate(level, x, y, z, id);
         this.breakIfIncorrect(level, x, y, z);
     }
 
+    @Override
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {
         this.breakIfIncorrect(level, x, y, z);
     }
@@ -64,22 +67,27 @@ public class GoldPlants extends TemplateBlockBase {
 
     }
 
+    @Override
     public boolean canGrow(Level level, int x, int y, int z) {
-        return (level.getLightLevel(x, y, z) >= 8 || level.isAboveGroundCached(x, y, z)) && this.canPlantOnTopOf(level.getTileId(x, y - 1, z));
+        return (level.getLightLevel(x, y, z) >= 2 || level.isAboveGroundCached(x, y, z)) && this.canPlantOnTopOf(level.getTileId(x, y - 1, z));
     }
 
+    @Override
     public Box getCollisionShape(Level level, int x, int y, int z) {
         return null;
     }
 
+    @Override
     public boolean isFullOpaque() {
         return false;
     }
 
+    @Override
     public boolean isFullCube() {
         return false;
     }
 
+    @Override
     @Environment(EnvType.CLIENT)
     public int getRenderType() {
         return 1;

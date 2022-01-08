@@ -15,13 +15,13 @@ import net.modificationstation.stationapi.api.util.Null;
 public class BlockListener {
 
     public static TemplateBed skyBed;
-    public static TemplateBlockBase energiumiteBlocks;
-    public static TemplateBlockBase dungeonBlocks;
-    public static TemplateBlockBase unbreakableDungeonBlocks;
-    public static TemplateBlockBase skyDirt;
-    public static TemplateBlockBase skyFarmland;
     public static TemplatePlant beanCrop;
-    public static TemplateBlockBase processedAlphium,
+    public static TemplateBlockBase energiumiteBlocks,
+                                    dungeonBlocks,
+                                    unbreakableDungeonBlocks,
+                                    skyDirt,
+                                    skyFarmland,
+                                    processedAlphium,
                                     skyGrass,
                                     skyLogs,
                                     skyLeaves,
@@ -31,7 +31,9 @@ public class BlockListener {
                                     skyShroom,
                                     stoneGrass,
                                     thinBalloonShroom,
-                                    mediumSkyShroom;
+                                    mediumSkyShroom,
+                                    desertPlants,
+                                    poolPlants;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -52,7 +54,7 @@ public class BlockListener {
         processedAlphium = new ProcessedAlphium(Identifier.of(MOD_ID, "processed_alphium"), Material.STONE).setHardness(1.5F).setTranslationKey(MOD_ID, "processed_alphium");
         skyGrass = new SkyGrass(Identifier.of(MOD_ID, "sky_grass"), Material.DIRT).setHardness(0.5F).setTranslationKey(MOD_ID, "sky_grass");
         skyLogs = new SkyLogs(Identifier.of(MOD_ID, "sky_logs"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_logs");
-        skyLeaves = new SkyLeaves(Identifier.of(MOD_ID, "sky_leaves"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_leaves");
+        skyLeaves = new SkyLeaves(Identifier.of(MOD_ID, "sky_leaves"), Material.LEAVES).setHardness(0.5F).setTranslationKey(MOD_ID, "sky_leaves");
         coldPlants = new ColdPlants(Identifier.of(MOD_ID, "cold_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "cold_plants");
         lushPlants = new LushPlants(Identifier.of(MOD_ID, "lush_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "lush_plants");
         goldPlants = new GoldPlants(Identifier.of(MOD_ID, "gold_plants"), Material.PLANT).setHardness(0.0F).setTranslationKey(MOD_ID, "gold_plants");
@@ -60,5 +62,7 @@ public class BlockListener {
         stoneGrass = new StoneGrass(Identifier.of(MOD_ID, "stone_grass"), Material.STONE).setHardness(1.5F).setTranslationKey(MOD_ID, "stone_grass");
         thinBalloonShroom = new ThinBalloonShroom(Identifier.of(MOD_ID, "thin_balloon_shroom"), Material.PLANT).setHardness(0.25F).setTranslationKey(MOD_ID, "thin_balloon_shroom");
         mediumSkyShroom = new MediumSkyShroom(Identifier.of(MOD_ID, "medium_sky_shroom"), Material.PLANT).setHardness(0.5F).setTranslationKey(MOD_ID, "medium_sky_shroom");
+        desertPlants = new DesertPlants(Identifier.of(MOD_ID, "desert_plants"), Material.PLANT).setHardness(0.5F).setTranslationKey(MOD_ID, "desert_plants");
+        poolPlants = new PoolPlants(Identifier.of(MOD_ID, "pool_plants"), Material.WOOD).setHardness(0.5F).setTranslationKey(MOD_ID, "pool_plants");
     }
 }

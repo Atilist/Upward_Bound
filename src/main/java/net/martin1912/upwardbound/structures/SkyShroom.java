@@ -18,7 +18,13 @@ public class SkyShroom extends Structure {
                 }
             }
         }
-        int randomHeight = rand.nextInt(6) + 1;
+        int sizeBalancer = rand.nextInt(10);
+        int randomHeight;
+        if (sizeBalancer < 8) {
+            randomHeight = rand.nextInt(2) + 1;
+        } else {
+            randomHeight = rand.nextInt(6) + 1;
+        }
         for (int buildStem = 0; buildStem <= randomHeight; buildStem++) {
             level.setTile(x, buildStem + y, z, BlockListener.skyShroom.id);
         }

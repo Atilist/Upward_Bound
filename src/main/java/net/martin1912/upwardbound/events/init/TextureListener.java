@@ -215,6 +215,15 @@ public class TextureListener {
         SmallBalloonShroom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BalloonShroom/SmallBalloonShroom")).index;
         ThinStem = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BalloonShroom/ThinStem")).index;
         ThinStemAdapter = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BalloonShroom/ThinStemAdapter")).index;
+
+        DesertCactusBottom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/DesertCactusBottom")).index;
+        DesertCactusSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/DesertCactusSide")).index;
+        DesertCactusTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/DesertCactusTop")).index;
+        PoolPlantRoots = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantRoots")).index;
+
+        PoolPlantTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantTop")).index;
+        PoolPlantSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantSide")).index;
+        PoolPlantTopWet = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantTopWet")).index;
     }
 
     public static int
@@ -404,7 +413,16 @@ public class TextureListener {
             BalloonBlock,
             SmallBalloonShroom,
             ThinStem,
-            ThinStemAdapter;
+            ThinStemAdapter,
+
+            DesertCactusBottom,
+            DesertCactusSide,
+            DesertCactusTop,
+            PoolPlantRoots,
+
+            PoolPlantTop,
+            PoolPlantSide,
+            PoolPlantTopWet;
 }
 //Bloom
 //Drought

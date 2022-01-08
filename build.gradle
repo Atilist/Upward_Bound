@@ -87,7 +87,12 @@ dependencies {
 	compile 'org.jetbrains:annotations:16.0.2'
 
 	modImplementation "com.github.minecraft-cursed-legacy:cursed-fabric-loader:${project.loader_version}"
-
+	implementation "com.github.jhalterman:typetools:${project.typetools_version}"
+	implementation "com.github.mineLdiver:expressions:${project.expressions_version}"
+	implementation "com.github.mineLdiver:UnsafeEvents:${project.unsafeevents_version}"
+	implementation "it.unimi.dsi:fastutil:${project.fastutil_version}"
+	//noinspection GradlePackageUpdate
+	implementation "com.github.ben-manes.caffeine:caffeine:${project.caffeine_version}"
 	modImplementation "com.github.ModificationStation:StationAPI:${project.stapi_version}"
 
 	modImplementation ("com.github.Atilist:Beta_Extras:${project.betaextras_version}") {

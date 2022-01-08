@@ -131,7 +131,7 @@ public class LushPlants extends TemplateBlockBase {
 
     @Override
     public boolean canGrow(Level level, int x, int y, int z) {
-        return (level.getLightLevel(x, y, z) >= 8 || level.isAboveGroundCached(x, y, z)) && this.canPlantOnTopOf(level.getTileId(x, y - 1, z));
+        return (level.getLightLevel(x, y, z) >= 2 || level.isAboveGroundCached(x, y, z)) && this.canPlantOnTopOf(level.getTileId(x, y - 1, z));
     }
 
     @Override
