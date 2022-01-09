@@ -101,6 +101,8 @@ public class BiomesDistributor extends Structure {
                                 level.setTile(x + xOffset, height, z + zOffset, BlockBase.SAND.id);
                                 if (randomizer == 0) {
                                     GravelPatch.generate(level, rand, x + xOffset, height, z + zOffset);
+                                } else if (randomizer <= 6 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    PoolPlant.generate(level, rand, x + xOffset, height + 1, z + zOffset);
                                 }
                             }
                         } else {
