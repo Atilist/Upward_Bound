@@ -5,6 +5,9 @@ achievement.apple.desc=Pick up an apple.
 
 achievement.page.examplemod=Example
 
+gui.enteringSkylands=Ascending to the Skylands
+gui.leavingSkylands=Waking up from the Skylands
+
 # Actually important stuff
 item.sky_bed_item.name=Sky Bed
 item.cold_energiumite.name=Cold Energiumite

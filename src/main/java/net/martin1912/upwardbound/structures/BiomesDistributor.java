@@ -103,6 +103,8 @@ public class BiomesDistributor extends Structure {
                                     GravelPatch.generate(level, rand, x + xOffset, height, z + zOffset);
                                 } else if (randomizer <= 6 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
                                     PoolPlant.generate(level, rand, x + xOffset, height + 1, z + zOffset);
+                                } else if (randomizer <= 8 && level.getBrightness(x + xOffset, height + 1, z + zOffset) > 0.9) {
+                                    SkyDesertCactus.generate(level, rand, x + xOffset, height + 1, z + zOffset);
                                 }
                             }
                         } else {

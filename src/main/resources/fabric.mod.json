@@ -19,6 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
+      "net.martin1912.upwardbound.UpwardBound",
       "net.martin1912.upwardbound.events.init.AchievementListener",
       "net.martin1912.upwardbound.events.init.BlockListener",
       "net.martin1912.upwardbound.events.init.ItemListener",

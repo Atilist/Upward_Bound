@@ -4,7 +4,8 @@
   "package": "net.martin1912.upwardbound.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ExampleMixin"
+    "ExampleMixin",
+    "SkyMessageMixin"
   ],
   "server": [
   ],
