@@ -33,7 +33,8 @@ public class BlockListener {
                                     thinBalloonShroom,
                                     mediumSkyShroom,
                                     desertPlants,
-                                    poolPlants;
+                                    poolPlants,
+                                    itemPipes;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -64,5 +65,6 @@ public class BlockListener {
         mediumSkyShroom = new MediumSkyShroom(Identifier.of(MOD_ID, "medium_sky_shroom"), Material.PLANT).setHardness(0.5F).setTranslationKey(MOD_ID, "medium_sky_shroom");
         desertPlants = new DesertPlants(Identifier.of(MOD_ID, "desert_plants"), Material.PLANT).setHardness(0.5F).setTranslationKey(MOD_ID, "desert_plants");
         poolPlants = new PoolPlants(Identifier.of(MOD_ID, "pool_plants"), Material.WOOD).setHardness(0.5F).setTranslationKey(MOD_ID, "pool_plants");
+        itemPipes = new ItemPipes(Identifier.of(MOD_ID, "item_pipes"), Material.STONE).setHardness(0.5F).setTranslationKey(MOD_ID, "item_pipes");
     }
 }

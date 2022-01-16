@@ -28,6 +28,20 @@ public class RecipeListener {
         }
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS.type()) {
             CraftingRegistry.addShapelessRecipe(new ItemInstance(ItemListener.skyBedItem), new ItemInstance(ItemListener.rodOfDreams), new ItemInstance(ItemBase.bed));
+
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 0), new ItemInstance(BlockListener.itemPipes, 1, 0));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 1), new ItemInstance(BlockListener.itemPipes, 1, 1));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 2), new ItemInstance(BlockListener.itemPipes, 1, 2));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 3), new ItemInstance(BlockListener.itemPipes, 1, 3));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 4), new ItemInstance(BlockListener.itemPipes, 1, 4));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 5), new ItemInstance(BlockListener.itemPipes, 1, 5));
+
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 6), new ItemInstance(BlockListener.itemPipes, 1, 6));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 7), new ItemInstance(BlockListener.itemPipes, 1, 7));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 8), new ItemInstance(BlockListener.itemPipes, 1, 8));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 9), new ItemInstance(BlockListener.itemPipes, 1, 9));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 10), new ItemInstance(BlockListener.itemPipes, 1, 10));
+            CraftingRegistry.addShapelessRecipe(new ItemInstance(BlockListener.itemPipes, 1, 11), new ItemInstance(BlockListener.itemPipes, 1, 11));
         }
     }
 }

@@ -43,3 +43,18 @@ tile.sky_grass1.name=Cold Grass
 tile.sky_grass2.name=Lush Grass
 tile.sky_grass3.name=Balloon Grass
 tile.sky_grass4.name=Gold Grass
+
+tile.item_pipes0.name=Item Pipe 0
+tile.item_pipes1.name=Item Pipe 1
+tile.item_pipes2.name=Item Pipe 2
+tile.item_pipes3.name=Item Pipe 3
+tile.item_pipes4.name=Item Pipe 4
+tile.item_pipes5.name=Item Pipe 5
+
+tile.item_pipes6.name=Item Input Pipe 0
+tile.item_pipes7.name=Item Input Pipe 1
+tile.item_pipes8.name=Item Input Pipe 2
+tile.item_pipes9.name=Item Input Pipe 3
+tile.item_pipes10.name=Item Input Pipe 4
+tile.item_pipes11.name=Item Input Pipe 5
+

@@ -226,7 +226,6 @@ public class SkyGrass extends TemplateBlockBase {
             level.placeBlockWithMetaData(x, y, z, 1, 0);
             level.placeBlockWithMetaData(x, y, z, BlockListener.skyGrass.id, selfMeta);
         }
-        System.out.println(seasons);
         level.getLevelTime();
         if (!level.isClient) {
             if (level.placeTile(x, y + 1, z) < 4 && BlockBase.LIGHT_OPACITY[level.getTileId(x, y + 1, z)] > 2) {

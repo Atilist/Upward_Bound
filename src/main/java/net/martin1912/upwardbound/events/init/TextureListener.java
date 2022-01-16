@@ -224,6 +224,16 @@ public class TextureListener {
         PoolPlantTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantTop")).index;
         PoolPlantSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantSide")).index;
         PoolPlantTopWet = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "DesertPlants/PoolPlantTopWet")).index;
+
+        PipeDown = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeDown")).index;
+        PipeUp = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeUp")).index;
+        PipeLeft = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeLeft")).index;
+        PipeRight = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeRight")).index;
+        PipeFirstDown = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstDown")).index;
+        PipeFirstUp = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstUp")).index;
+        PipeFirstLeft = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstLeft")).index;
+        PipeFirstRight = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstRight")).index;
+        PipeHole = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeHole")).index;
     }
 
     public static int
@@ -422,7 +432,17 @@ public class TextureListener {
 
             PoolPlantTop,
             PoolPlantSide,
-            PoolPlantTopWet;
+            PoolPlantTopWet,
+
+            PipeDown,
+            PipeUp,
+            PipeLeft,
+            PipeRight,
+            PipeFirstDown,
+            PipeFirstUp,
+            PipeFirstLeft,
+            PipeFirstRight,
+            PipeHole;
 }
 //Bloom
 //Drought

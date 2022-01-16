@@ -23,7 +23,7 @@ public class SkyLogs extends TemplateBlockBase {
 
     @Override
     public int droppedMeta(int i) {
-        return 0;
+        return i;
     }
 
     @Override
