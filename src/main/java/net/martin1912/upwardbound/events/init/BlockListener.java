@@ -9,6 +9,7 @@ import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.registry.ModID;
 import net.modificationstation.stationapi.api.template.block.TemplateBed;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
+import net.modificationstation.stationapi.api.template.block.TemplateBlockWithEntity;
 import net.modificationstation.stationapi.api.template.block.TemplatePlant;
 import net.modificationstation.stationapi.api.util.Null;
 
@@ -35,6 +36,7 @@ public class BlockListener {
                                     desertPlants,
                                     poolPlants,
                                     itemPipes;
+    public static TemplateBlockWithEntity skyBarrel;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -66,5 +68,6 @@ public class BlockListener {
         desertPlants = new DesertPlants(Identifier.of(MOD_ID, "desert_plants"), Material.PLANT).setHardness(0.5F).setTranslationKey(MOD_ID, "desert_plants");
         poolPlants = new PoolPlants(Identifier.of(MOD_ID, "pool_plants"), Material.WOOD).setHardness(0.5F).setTranslationKey(MOD_ID, "pool_plants");
         itemPipes = new ItemPipes(Identifier.of(MOD_ID, "item_pipes"), Material.STONE).setHardness(0.5F).setTranslationKey(MOD_ID, "item_pipes");
+        skyBarrel = new SkyBarrel(Identifier.of(MOD_ID, "sky_barrel"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_barrel");
     }
 }

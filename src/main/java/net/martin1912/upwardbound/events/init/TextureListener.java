@@ -234,6 +234,8 @@ public class TextureListener {
         PipeFirstLeft = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstLeft")).index;
         PipeFirstRight = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstRight")).index;
         PipeHole = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeHole")).index;
+
+        SkyBarrel  = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrel")).index;
     }
 
     public static int
@@ -442,7 +444,9 @@ public class TextureListener {
             PipeFirstUp,
             PipeFirstLeft,
             PipeFirstRight,
-            PipeHole;
+            PipeHole,
+
+            SkyBarrel;
 }
 //Bloom
 //Drought
