@@ -1,10 +1,8 @@
 package net.martin1912.upwardbound.blocks;
 
 import net.martin1912.upwardbound.events.init.BlockListener;
-import net.martin1912.upwardbound.events.init.ItemListener;
 import net.minecraft.block.BlockBase;
 import net.minecraft.entity.Item;
-import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.level.BlockView;
 import net.fabricmc.api.EnvType;

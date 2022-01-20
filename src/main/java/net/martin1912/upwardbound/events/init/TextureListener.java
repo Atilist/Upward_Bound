@@ -1,5 +1,6 @@
 package net.martin1912.upwardbound.events.init;
 
+import net.martin1912.upwardbound.blocks.SkyBarrel;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.modificationstation.stationapi.api.client.event.texture.TextureRegisterEvent;
 import net.modificationstation.stationapi.api.client.texture.atlas.Atlases;
@@ -235,7 +236,11 @@ public class TextureListener {
         PipeFirstRight = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeFirstRight")).index;
         PipeHole = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ItemPipes/PipeHole")).index;
 
-        SkyBarrel  = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrel")).index;
+        SkyBarrel = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrel")).index;
+        SkyBarrelBottom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelBottom")).index;
+        SkyBarrelLeft = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelLeft")).index;
+        SkyBarrelRight = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelRight")).index;
+        SkyBarrelTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelTop")).index;
     }
 
     public static int
@@ -446,7 +451,11 @@ public class TextureListener {
             PipeFirstRight,
             PipeHole,
 
-            SkyBarrel;
+            SkyBarrel,
+            SkyBarrelBottom,
+            SkyBarrelLeft,
+            SkyBarrelRight,
+            SkyBarrelTop;
 }
 //Bloom
 //Drought
