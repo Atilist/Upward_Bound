@@ -2,11 +2,13 @@ package net.martin1912.upwardbound.blocks;
 
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.martin1912.upwardbound.tileentities.TileEntitySkyBarrel;
+import net.minecraft.block.BlockBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.level.Level;
 import net.minecraft.tileentity.TileEntityBase;
+import net.minecraft.tileentity.TileEntityChest;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
 import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockWithEntity;
@@ -138,7 +140,58 @@ public class SkyBarrel extends TemplateBlockWithEntity {
 
     @Override
     public void onAdjacentBlockUpdate(Level level, int x, int y, int z, int id) {
-
+        if (level.hasRedstonePower(x, y, z)) {
+            int selfMeta = level.getTileMeta(x, y, z);
+            int xOffset = 0;
+            int yOffset = 0;
+            int zOffset = 0;
+            switch (selfMeta) {
+                case 0:
+                    zOffset = 1;
+                    break;
+                case 1:
+                    zOffset = -1;
+                    break;
+                case 2:
+                    xOffset = 1;
+                    break;
+                case 3:
+                    xOffset = -1;
+                    break;
+                case 4:
+                    yOffset = 1;
+                    break;
+                case 5:
+                    yOffset = -1;
+                    break;
+                case 6:
+                    return;
+            }
+            if (level.getTileId(x + xOffset, y + yOffset, z + zOffset) == BlockBase.CHEST.id && level.getTileEntity(x + xOffset, y + yOffset, z + zOffset) != null) {
+                TileEntitySkyBarrel barrelTileEntity = (TileEntitySkyBarrel) level.getTileEntity(x, y, z);
+                TileEntityChest tileEntityChest = (TileEntityChest) level.getTileEntity(x + xOffset, y + yOffset, z + zOffset);
+                for (int i = 0; i < tileEntityChest.getInventorySize(); i++) {
+                    if (tileEntityChest.getInventoryItem(i) != null) {
+                        if (barrelTileEntity.getBarrelItem() == null) {
+                            barrelTileEntity.setBarrelItem(tileEntityChest.getInventoryItem(i));
+                            tileEntityChest.setInventoryItem(i, null);
+                            break;
+                        } else if (tileEntityChest.getInventoryItem(i).itemId == barrelTileEntity.getBarrelItem().itemId && tileEntityChest.getInventoryItem(i).getDamage() == barrelTileEntity.getBarrelItem().getDamage()) {
+                            int chestItemCount = tileEntityChest.getInventoryItem(i).count;
+                            int barrelItemCount = barrelTileEntity.getBarrelItem().count;
+                            if (chestItemCount + barrelItemCount > barrelTileEntity.getBarrelItem().getMaxStackSize() * 32) {
+                                barrelTileEntity.setBarrelItem(new ItemInstance(tileEntityChest.getInventoryItem(i).itemId, barrelTileEntity.getBarrelItem().getMaxStackSize() * 32, tileEntityChest.getInventoryItem(i).getDamage()));
+                                tileEntityChest.setInventoryItem(i, new ItemInstance(tileEntityChest.getInventoryItem(i).itemId, chestItemCount + barrelItemCount - barrelTileEntity.getBarrelItem().getMaxStackSize() * 32, tileEntityChest.getInventoryItem(i).getDamage()));
+                            } else {
+                                barrelTileEntity.setBarrelItem(new ItemInstance(tileEntityChest.getInventoryItem(i).itemId, barrelItemCount + chestItemCount, tileEntityChest.getInventoryItem(i).getDamage()));
+                                tileEntityChest.setInventoryItem(i, null);
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @Override

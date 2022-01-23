@@ -94,9 +94,9 @@ public class ItemPipes extends TemplateBlockBase {
                     case 3:
                         return TextureListener.PipeHole; // Z+
                     case 4:
-                        return TextureListener.PipeRight; // X-
+                        return TextureListener.PipeLeft; // X-
                     case 5:
-                        return TextureListener.PipeLeft; // X+
+                        return TextureListener.PipeRight; // X+
                 }
             case 1: // Z+
                 switch (side) {
@@ -109,26 +109,11 @@ public class ItemPipes extends TemplateBlockBase {
                     case 3:
                         return TextureListener.PipeHole; // Z+
                     case 4:
-                        return TextureListener.PipeLeft; // X-
+                        return TextureListener.PipeRight; // X-
                     case 5:
-                        return TextureListener.PipeRight; // X+
+                        return TextureListener.PipeLeft; // X+
                 }
             case 2: // X-
-                switch (side) {
-                    case 0:
-                        return TextureListener.PipeRight; // Bottom
-                    case 1:
-                        return TextureListener.PipeRight; // Top
-                    case 2:
-                        return TextureListener.PipeLeft; // Z-
-                    case 3:
-                        return TextureListener.PipeRight; // Z+
-                    case 4:
-                        return TextureListener.PipeHole; // X-
-                    case 5:
-                        return TextureListener.PipeHole; // X+
-                }
-            case 3: //X+
                 switch (side) {
                     case 0:
                         return TextureListener.PipeLeft; // Bottom
@@ -138,6 +123,21 @@ public class ItemPipes extends TemplateBlockBase {
                         return TextureListener.PipeRight; // Z-
                     case 3:
                         return TextureListener.PipeLeft; // Z+
+                    case 4:
+                        return TextureListener.PipeHole; // X-
+                    case 5:
+                        return TextureListener.PipeHole; // X+
+                }
+            case 3: //X+
+                switch (side) {
+                    case 0:
+                        return TextureListener.PipeRight; // Bottom
+                    case 1:
+                        return TextureListener.PipeRight; // Top
+                    case 2:
+                        return TextureListener.PipeLeft; // Z-
+                    case 3:
+                        return TextureListener.PipeRight; // Z+
                     case 4:
                         return TextureListener.PipeHole; // X-
                     case 5:
@@ -184,9 +184,9 @@ public class ItemPipes extends TemplateBlockBase {
                     case 3:
                         return TextureListener.PipeHole; // Z+
                     case 4:
-                        return TextureListener.PipeFirstRight; // X-
+                        return TextureListener.PipeFirstLeft; // X-
                     case 5:
-                        return TextureListener.PipeFirstLeft; // X+
+                        return TextureListener.PipeFirstRight; // X+
                 }
             case 7: // Z+
                 switch (side) {
@@ -199,26 +199,11 @@ public class ItemPipes extends TemplateBlockBase {
                     case 3:
                         return TextureListener.PipeHole; // Z+
                     case 4:
-                        return TextureListener.PipeFirstLeft; // X-
+                        return TextureListener.PipeFirstRight; // X-
                     case 5:
-                        return TextureListener.PipeFirstRight; // X+
+                        return TextureListener.PipeFirstLeft; // X+
                 }
             case 8: // X-
-                switch (side) {
-                    case 0:
-                        return TextureListener.PipeFirstRight; // Bottom
-                    case 1:
-                        return TextureListener.PipeFirstRight; // Top
-                    case 2:
-                        return TextureListener.PipeFirstLeft; // Z-
-                    case 3:
-                        return TextureListener.PipeFirstRight; // Z+
-                    case 4:
-                        return TextureListener.PipeHole; // X-
-                    case 5:
-                        return TextureListener.PipeHole; // X+
-                }
-            case 9: //X+
                 switch (side) {
                     case 0:
                         return TextureListener.PipeFirstLeft; // Bottom
@@ -228,6 +213,21 @@ public class ItemPipes extends TemplateBlockBase {
                         return TextureListener.PipeFirstRight; // Z-
                     case 3:
                         return TextureListener.PipeFirstLeft; // Z+
+                    case 4:
+                        return TextureListener.PipeHole; // X-
+                    case 5:
+                        return TextureListener.PipeHole; // X+
+                }
+            case 9: //X+
+                switch (side) {
+                    case 0:
+                        return TextureListener.PipeFirstRight; // Bottom
+                    case 1:
+                        return TextureListener.PipeFirstRight; // Top
+                    case 2:
+                        return TextureListener.PipeFirstLeft; // Z-
+                    case 3:
+                        return TextureListener.PipeFirstRight; // Z+
                     case 4:
                         return TextureListener.PipeHole; // X-
                     case 5:

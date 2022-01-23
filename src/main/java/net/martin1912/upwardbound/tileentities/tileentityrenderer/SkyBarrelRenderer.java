@@ -15,22 +15,6 @@ public class SkyBarrelRenderer extends TileEntityRenderer {
     @Override
     public void render(TileEntityBase entity, double x, double y, double z, float f) {
         ItemInstance barrelItem = ((TileEntitySkyBarrel) entity).getBarrelItem();
-        //int itemCount = ((TileEntitySkyBarrel) entity).getCount();
-        /*
-        this.method_1064("/assets/upwardbound/stationapi/textures/Items/Energiumite.png");
-        GL11.glPushMatrix();
-        GL11.glTranslated(x + 0.25, y + 0.25, z + 1.001);
-        GL11.glScalef(0.5F, 0.5F, 0.5F);
-        Tessellator tessellator = Tessellator.INSTANCE;
-        tessellator.start();
-        tessellator.vertex(0, 0 ,0, 0, 1);
-        tessellator.vertex(1, 0 ,0, 1, 1);
-        tessellator.vertex(1, 1 ,0, 1, 0);
-        tessellator.vertex(0, 1 ,0, 0, 0);
-        tessellator.draw();
-        GL11.glPopMatrix();
-
-         */
         if (barrelItem != null) {
             GL11.glPushMatrix();
             GL11.glTranslated(x + 0.25, y + 0.75, z + 1.001);
