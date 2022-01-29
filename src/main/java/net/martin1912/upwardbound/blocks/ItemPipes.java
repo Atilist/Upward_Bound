@@ -1,6 +1,7 @@
 package net.martin1912.upwardbound.blocks;
 
 import net.martin1912.upwardbound.events.init.BlockListener;
+import net.martin1912.upwardbound.tileentities.TileEntitySkyBarrel;
 import net.minecraft.block.BlockBase;
 import net.minecraft.entity.Item;
 import net.minecraft.item.ItemInstance;
@@ -309,10 +310,6 @@ public class ItemPipes extends TemplateBlockBase {
                         }
                     }
                     if (inventoryItem != null) {
-                        System.out.println("Ahhh");
-                        int itemId = inventoryItem.itemId;
-                        int itemMeta = inventoryItem.getDamage();
-                        int itemCount = inventoryItem.count;
                         switch (selfMeta) {
                             case 6:
                                 pipeLengthZ = -1;
@@ -369,38 +366,139 @@ public class ItemPipes extends TemplateBlockBase {
                                 }
                                 break;
                         }
-                        if (level.getTileId(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ) == 0) {
-                            System.out.println("Amogus");
-                            inputChest.setInventoryItem(inventorySlot, null);
-                            Item drop = new Item(level, x + 0.5 + pipeLengthX, y + 0.5 + pipeLengthY, z + 0.5 + pipeLengthZ, new ItemInstance(itemId, itemCount, itemMeta));
-                            drop.pickupDelay = 10;
-                            level.spawnEntity(drop);
-                        } else if (level.getTileId(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ) == BlockBase.CHEST.id) {
-                            TileEntityChest outputChest = (TileEntityChest) level.getTileEntity(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ);
-                            int outputInventorySlot = 0;
-                            for (; outputInventorySlot < outputChest.getInventorySize(); outputInventorySlot++) {
-                                if (outputChest.getInventoryItem(outputInventorySlot) == null) {
-                                    outputChest.setInventoryItem(outputInventorySlot, inventoryItem);
-                                    inputChest.setInventoryItem(inventorySlot, null);
-                                    break;
-                                } else if (outputChest.getInventoryItem(outputInventorySlot).itemId == itemId && outputChest.getInventoryItem(outputInventorySlot).getDamage() == itemMeta && outputChest.getInventoryItem(outputInventorySlot).count < 64) {
-                                    int totalItems = itemCount + outputChest.getInventoryItem(outputInventorySlot).count;
-                                    if (totalItems <= 64) {
-                                        outputChest.setInventoryItem(outputInventorySlot, new ItemInstance(itemId, totalItems, itemMeta));
-                                        inputChest.setInventoryItem(inventorySlot, null);
-                                    } else {
-                                        int leftovers = totalItems - 64;
-                                        outputChest.setInventoryItem(outputInventorySlot, new ItemInstance(itemId, 64, itemMeta));
-                                        inputChest.setInventoryItem(inventorySlot, new ItemInstance(itemId, leftovers, itemMeta));
+                        System.out.println("Ahhh");
+                        int itemId = inventoryItem.itemId;
+                        int itemMeta = inventoryItem.getDamage();
+                        int itemCount = inventoryItem.count;
+                        int[] outcome = sendToInventory(x, y, z, pipeLengthX, pipeLengthY, pipeLengthZ, level, itemId, itemCount, itemMeta, inventoryItem);
+                        switch (outcome[0]) {
+                            case 0:
+                                break;
+                            case 1:
+                                inputChest.setInventoryItem(inventorySlot, null);
+                                break;
+                            case 2:
+                                inputChest.setInventoryItem(inventorySlot, new ItemInstance(itemId, outcome[1], itemMeta));
+                                break;
+                        }
+                    }
+                } else if (level.getTileId(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ) == BlockListener.skyBarrel.id) {
+                    TileEntitySkyBarrel tileEntitySkyBarrel = (TileEntitySkyBarrel) level.getTileEntity(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ);
+                    ItemInstance inventoryItem = tileEntitySkyBarrel.getBarrelItem();
+                    if (inventoryItem != null) {
+                        int itemId = inventoryItem.itemId;
+                        int itemMeta = inventoryItem.getDamage();
+                        int itemCount = inventoryItem.count;
+                        if (itemCount > inventoryItem.getMaxStackSize()) {
+                            itemCount = inventoryItem.getMaxStackSize();
+                        }
+                        if (itemCount > 0) {
+                            switch (selfMeta) {
+                                case 6:
+                                    pipeLengthZ = -1;
+                                    for (; pipeLengthZ > -25; pipeLengthZ--) {
+                                        if (level.getTileMeta(x, y, z + pipeLengthZ) == 0 && level.getTileId(x, y, z + pipeLengthZ) != BlockListener.itemPipes.id || level.getTileMeta(x, y, z + pipeLengthZ) != 0 && level.getTileId(x, y, z + pipeLengthZ) == BlockListener.itemPipes.id) {
+                                            System.out.println("Kek");
+                                            break;
+                                        }
                                     }
                                     break;
-                                }
+                                case 7:
+                                    pipeLengthZ = 1;
+                                    for (; pipeLengthZ < 25; pipeLengthZ++) {
+                                        if (level.getTileMeta(x, y, z + pipeLengthZ) != 1 && level.getTileId(x, y, z + pipeLengthZ) != BlockListener.itemPipes.id) {
+                                            System.out.println("Kek");
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                case 8:
+                                    pipeLengthX = -1;
+                                    for (; pipeLengthX > -25; pipeLengthX--) {
+                                        if (level.getTileMeta(x + pipeLengthX, y, z) != 2 && level.getTileId(x + pipeLengthX, y, z) != BlockListener.itemPipes.id) {
+                                            System.out.println("Kek");
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                case 9:
+                                    pipeLengthX = 1;
+                                    for (; pipeLengthX < 25; pipeLengthX++) {
+                                        if (level.getTileMeta(x + pipeLengthX, y, z) != 3 && level.getTileId(x + pipeLengthX, y, z) != BlockListener.itemPipes.id) {
+                                            System.out.println("Kek");
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                case 10:
+                                    pipeLengthY = -1;
+                                    for (; pipeLengthY > -25; pipeLengthY--) {
+                                        if (level.getTileMeta(x, y + pipeLengthY, z) != 4 && level.getTileId(x, y + pipeLengthY, z) != BlockListener.itemPipes.id) {
+                                            System.out.println("Kek");
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                case 11:
+                                    pipeLengthY = 1;
+                                    for (; pipeLengthY < 25; pipeLengthY++) {
+                                        if (level.getTileMeta(x, y + pipeLengthY, z) != 5 && level.getTileId(x, y + pipeLengthY, z) != BlockListener.itemPipes.id) {
+                                            System.out.println("Kek");
+                                            break;
+                                        }
+                                    }
+                                    break;
+                            }
+                            int[] outcome = sendToInventory(x, y, z, pipeLengthX, pipeLengthY, pipeLengthZ, level, itemId, itemCount, itemMeta, inventoryItem);
+                            switch (outcome[0]) {
+                                case 0:
+                                    break;
+                                case 1:
+                                    tileEntitySkyBarrel.setBarrelItem(new ItemInstance(itemId, itemCount - inventoryItem.getMaxStackSize(), itemMeta));
+                                    break;
+                                case 2:
+                                    tileEntitySkyBarrel.setBarrelItem(new ItemInstance(itemId, itemCount - outcome[1], itemMeta));
+                                    break;
                             }
                         }
                     }
                 }
             }
         }
+    }
+
+    private int[] sendToInventory(int x, int y, int z, int pipeLengthX, int pipeLengthY, int pipeLengthZ, Level level, int itemId, int itemCount, int itemMeta, ItemInstance inventoryItem) {
+        int[] outcome = new int[2];
+        if (level.getTileId(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ) == 0) {
+            System.out.println("Amogus");
+            Item drop = new Item(level, x + 0.5 + pipeLengthX, y + 0.5 + pipeLengthY, z + 0.5 + pipeLengthZ, new ItemInstance(itemId, itemCount, itemMeta));
+            drop.pickupDelay = 10;
+            level.spawnEntity(drop);
+            outcome[0] = 1;
+        } else if (level.getTileId(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ) == BlockBase.CHEST.id) {
+            TileEntityChest outputChest = (TileEntityChest) level.getTileEntity(x + pipeLengthX, y + pipeLengthY, z + pipeLengthZ);
+            int outputInventorySlot = 0;
+            for (; outputInventorySlot < outputChest.getInventorySize(); outputInventorySlot++) {
+                if (outputChest.getInventoryItem(outputInventorySlot) == null) {
+                    outputChest.setInventoryItem(outputInventorySlot, inventoryItem);
+                    outcome[0] = 1;
+                    break;
+                } else if (outputChest.getInventoryItem(outputInventorySlot).itemId == itemId && outputChest.getInventoryItem(outputInventorySlot).getDamage() == itemMeta && outputChest.getInventoryItem(outputInventorySlot).count < inventoryItem.getMaxStackSize()) {
+                    int totalItems = itemCount + outputChest.getInventoryItem(outputInventorySlot).count;
+                    if (totalItems <= inventoryItem.getMaxStackSize()) {
+                        outputChest.setInventoryItem(outputInventorySlot, new ItemInstance(itemId, totalItems, itemMeta));
+                        outcome[0] = 1;
+                    } else {
+                        int leftovers = totalItems - inventoryItem.getMaxStackSize();
+                        outputChest.setInventoryItem(outputInventorySlot, new ItemInstance(itemId, inventoryItem.getMaxStackSize(), itemMeta));
+                        outcome[0] = 2;
+                        outcome[1] = leftovers;
+                    }
+                    break;
+                }
+            }
+        }
+        return outcome;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package net.martin1912.upwardbound.events.init;
 
 import net.martin1912.upwardbound.structures.BiomesDistributor;
+import net.martin1912.upwardbound.structures.PipesStressTest;
 import net.martin1912.upwardbound.structures.SkyLootDungeon;
 import net.martin1912.upwardbound.structures.EnergiumiteCrystal;
 import net.mine_diver.unsafeevents.listener.EventListener;
@@ -33,6 +34,7 @@ public class ChunkListener {
             int y = 127;
             int z = event.z;
             new BiomesDistributor().generate(event.level, event.random, x, y, z);
+            //PipesStressTest.generate(event.level, event.random, x, 0, z);
         }
     }
 }
