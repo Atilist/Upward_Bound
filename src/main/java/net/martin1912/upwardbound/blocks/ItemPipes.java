@@ -454,7 +454,11 @@ public class ItemPipes extends TemplateBlockBase {
                                 case 0:
                                     break;
                                 case 1:
-                                    tileEntitySkyBarrel.setBarrelItem(new ItemInstance(itemId, itemCount - inventoryItem.getMaxStackSize(), itemMeta));
+                                    if (inventoryItem.count < inventoryItem.getMaxStackSize()) {
+                                        tileEntitySkyBarrel.setBarrelItem(new ItemInstance(itemId, 0, itemMeta));
+                                    } else {
+                                        tileEntitySkyBarrel.setBarrelItem(new ItemInstance(itemId, itemCount - inventoryItem.getMaxStackSize(), itemMeta));
+                                    }
                                     break;
                                 case 2:
                                     tileEntitySkyBarrel.setBarrelItem(new ItemInstance(itemId, itemCount - outcome[1], itemMeta));

@@ -1,6 +1,5 @@
 package net.martin1912.upwardbound.events.init;
 
-import net.martin1912.upwardbound.blocks.SkyBarrel;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.modificationstation.stationapi.api.client.event.texture.TextureRegisterEvent;
 import net.modificationstation.stationapi.api.client.texture.atlas.Atlases;
@@ -27,6 +26,9 @@ public class TextureListener {
         ItemListener.alphiumHoe.setTexture(Identifier.of(MOD_ID, "Items/AlphiumHoe"));
         ItemListener.energiumite.setTexture(Identifier.of(MOD_ID, "Items/Energiumite"));
         ItemListener.rodOfDreams.setTexture(Identifier.of(MOD_ID, "Items/RodOfDreams"));
+        ItemListener.amidiaIngot.setTexture(Identifier.of(MOD_ID, "SkyIngots/AmidiaIngot"));
+        ItemListener.sensitiveDust.setTexture(Identifier.of(MOD_ID, "Dusts/SensitiveDust"));
+        ItemListener.sensorCrystal.setTexture(Identifier.of(MOD_ID, "Items/SensorCrystal"));
 
         BedBack = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedBack")).index;
         BedFront = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyBed/BedFront")).index;
@@ -139,8 +141,11 @@ public class TextureListener {
         GoldLeavesStorm = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/GoldLeavesStorm")).index;
 
         LushLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/LushLog")).index;
+        LushLogTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/LushLogTop")).index;
         ColdLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/ColdLog")).index;
+        ColdLogTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/ColdLogTop")).index;
         GoldLog = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/GoldLog")).index;
+        GoldLogTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyTrees/GoldLogTop")).index;
 
         ColdTallGrass = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdTallGrass")).index;
         ColdTallGrassBloom = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "ColdPlants/ColdTallGrassBloom")).index;
@@ -241,6 +246,28 @@ public class TextureListener {
         SkyBarrelLeft = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelLeft")).index;
         SkyBarrelRight = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelRight")).index;
         SkyBarrelTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyBarrelTop")).index;
+
+        SkyPlanks = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "WoodenBlocks/SkyPlanks")).index;
+
+        AmidiaOre = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyOres/AmidiaOre")).index;
+
+        AmidiaBlock = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "MetalBlocks/AmidiaBlock")).index;
+
+        BarrelInput = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/BarrelInput")).index;
+        BarrelOutput = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/BarrelOutput")).index;
+        BlockBreakerSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/BlockBreakerSide")).index;
+        BlockBreakerTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/BlockBreakerTop")).index;
+        BlockPlacerSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/BlockPlacerSide")).index;
+        BlockPlacerTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/BlockPlacerTop")).index;
+        SqueezerSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerSide")).index;
+        SqueezerSideActive = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerSideActive")).index;
+        SqueezerTop = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerTop")).index;
+        SqueezerTopActive = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerTopActive")).index;
+        SqueezerWeightSide = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerWeightSide")).index;
+
+        SkyBerryBlock = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SkyFarming/SkyBerryBlock")).index;
+
+        BerrySponge = Atlases.getStationTerrain().addTexture(Identifier.of(MOD_ID, "SoakedSponges/BerrySponge")).index;
     }
 
     public static int
@@ -354,8 +381,11 @@ public class TextureListener {
             GoldLeavesStorm,
 
             LushLog,
+            LushLogTop,
             ColdLog,
+            ColdLogTop,
             GoldLog,
+            GoldLogTop,
 
             ColdTallGrass,
             ColdTallGrassBloom,
@@ -455,7 +485,29 @@ public class TextureListener {
             SkyBarrelBottom,
             SkyBarrelLeft,
             SkyBarrelRight,
-            SkyBarrelTop;
+            SkyBarrelTop,
+
+            SkyPlanks,
+
+            AmidiaOre,
+
+            AmidiaBlock,
+
+            BarrelInput,
+            BarrelOutput,
+            BlockBreakerSide,
+            BlockBreakerTop,
+            BlockPlacerSide,
+            BlockPlacerTop,
+            SqueezerSide,
+            SqueezerSideActive,
+            SqueezerTop,
+            SqueezerTopActive,
+            SqueezerWeightSide,
+
+            SkyBerryBlock,
+
+            BerrySponge;
 }
 //Bloom
 //Drought

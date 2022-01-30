@@ -15,6 +15,14 @@ public class TileEntitySkyBarrel extends TileEntityBase {
         barrelItem = pBarrelItem;
     }
 
+    public boolean changeItemCount(int pCount) {
+        if (barrelItem.count + pCount < barrelItem.getMaxStackSize() * 32) {
+            barrelItem = new ItemInstance(barrelItem.itemId, barrelItem.count + pCount, barrelItem.getDamage());
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public void readIdentifyingData(CompoundTag tag) {
         super.readIdentifyingData(tag);

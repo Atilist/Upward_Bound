@@ -35,7 +35,13 @@ public class BlockListener {
                                     mediumSkyShroom,
                                     desertPlants,
                                     poolPlants,
-                                    itemPipes;
+                                    itemPipes,
+                                    skyPlanks,
+                                    skyOres,
+                                    metalBlocks,
+                                    bigMachines,
+                                    farmBlocks,
+                                    soakedSponges;
     public static TemplateBlockWithEntity skyBarrel;
 
     @Entrypoint.ModID
@@ -69,5 +75,11 @@ public class BlockListener {
         poolPlants = new PoolPlants(Identifier.of(MOD_ID, "pool_plants"), Material.WOOD).setHardness(0.5F).setTranslationKey(MOD_ID, "pool_plants");
         itemPipes = new ItemPipes(Identifier.of(MOD_ID, "item_pipes"), Material.STONE).setHardness(0.5F).setTranslationKey(MOD_ID, "item_pipes");
         skyBarrel = new SkyBarrel(Identifier.of(MOD_ID, "sky_barrel"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_barrel");
+        skyPlanks = new SkyPlanks(Identifier.of(MOD_ID, "sky_planks"), Material.WOOD).setHardness(1.5F).setTranslationKey(MOD_ID, "sky_planks");
+        skyOres = new SkyOres(Identifier.of(MOD_ID, "sky_ores"), Material.STONE).setHardness(2.5F).setTranslationKey("sky_ores");
+        metalBlocks = new MetalBlocks(Identifier.of(MOD_ID, "metal_blocks"), Material.METAL).setHardness(2.5F).setTranslationKey("metal_blocks");
+        bigMachines = new BigMachines(Identifier.of(MOD_ID, "big_machines"), Material.PISTON).setHardness(1.0F).setTranslationKey("big_machines");
+        farmBlocks = new FarmBlocks(Identifier.of(MOD_ID, "farm_blocks"), Material.WOOD).setHardness(0.5F).setTranslationKey("farm_blocks");
+        soakedSponges = new SoakedSponges(Identifier.of(MOD_ID, "soaked_sponges"), Material.SPONGE).setHardness(0.5F).setTranslationKey("soaked_sponges");
     }
 }

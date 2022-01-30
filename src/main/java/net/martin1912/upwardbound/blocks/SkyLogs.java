@@ -30,11 +30,38 @@ public class SkyLogs extends TemplateBlockBase {
     public int getTextureForSide(int side, int meta) {
         switch (meta) {
             case 0:
-                return TextureListener.LushLog;
+                switch (side) {
+                    case 0:
+                    case 1:
+                        return TextureListener.LushLogTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.LushLog;
+                }
             case 1:
-                return TextureListener.ColdLog;
+                switch (side) {
+                    case 0:
+                    case 1:
+                        return TextureListener.ColdLogTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.ColdLog;
+                }
             case 2:
-                return TextureListener.GoldLog;
+                switch (side) {
+                    case 0:
+                    case 1:
+                        return TextureListener.GoldLogTop;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return TextureListener.GoldLog;
+                }
             default:
                 return super.getTextureForSide(side, meta);
         }

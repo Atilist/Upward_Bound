@@ -11,17 +11,20 @@ import net.modificationstation.stationapi.api.util.Null;
 
 public class ItemListener {
 
-    public static TemplateItemBase skyBedItem;
-    public static TemplateItemBase coldEnergiumite;
-    public static TemplateItemBase dungeonKey;
-    public static TemplateItemBase dungeonKeyBody;
-    public static TemplateItemBase dungeonKeyHead;
-    public static TemplateItemBase skyBean;
-    public static TemplateItemBase robustString;
-    public static TemplateItemBase pureAlphium;
-    public static TemplateItemBase alphiumHoe;
-    public static TemplateItemBase rodOfDreams;
-    public static TemplateItemBase energiumite;
+    public static TemplateItemBase  skyBedItem,
+                                    coldEnergiumite,
+                                    dungeonKey,
+                                    dungeonKeyBody,
+                                    dungeonKeyHead,
+                                    skyBean,
+                                    robustString,
+                                    pureAlphium,
+                                    alphiumHoe,
+                                    rodOfDreams,
+                                    energiumite,
+                                    amidiaIngot,
+                                    sensitiveDust,
+                                    sensorCrystal;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -39,5 +42,8 @@ public class ItemListener {
         alphiumHoe = new AlphiumHoe(Identifier.of(MOD_ID, "alphium_hoe")).setTranslationKey(MOD_ID, "alphium_hoe");
         rodOfDreams = new RodOfDreams(Identifier.of(MOD_ID, "rod_of_dreams")).setTranslationKey(MOD_ID, "rod_of_dreams");
         energiumite = new Energiumite(Identifier.of(MOD_ID, "energiumite")).setTranslationKey(MOD_ID, "energiumite");
+        amidiaIngot = new AmidiaIngot(Identifier.of(MOD_ID, "amidia_ingot")).setTranslationKey(MOD_ID, "amidia_ingot");
+        sensitiveDust = new SensitiveDust(Identifier.of(MOD_ID, "sensitive_dust")).setTranslationKey(MOD_ID, "sensitive_dust");
+        sensorCrystal = new SensorCrystal(Identifier.of(MOD_ID, "sensor_crystal")).setTranslationKey(MOD_ID, "sensor_crystal");
     }
 }

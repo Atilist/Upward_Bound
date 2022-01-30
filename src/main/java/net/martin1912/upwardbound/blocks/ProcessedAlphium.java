@@ -44,7 +44,7 @@ public class ProcessedAlphium extends TemplateBlockBase {
     @Override
     public void onAdjacentBlockUpdate(Level level, int x, int y, int z, int id) {
         int meta = level.getTileMeta(x, y, z);
-        if (meta == 0 && id > 0 && BlockBase.BY_ID[id].getEmitsRedstonePower()) {
+        if (meta == 0 && id > 0 && level.hasRedstonePower(x, y, z)) {
             level.placeBlockWithMetaData(x, y, z, BlockListener.processedAlphium.id, 1);
             for (int i = 0; i < 10; i++) {
                 level.addParticle("reddust", x + 0.8, y + 1, z + 0.2, 0, 0, 0);
