@@ -3,8 +3,10 @@ package net.martin1912.upwardbound.blocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.martin1912.upwardbound.events.init.BlockListener;
+import net.martin1912.upwardbound.events.init.ItemListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBase;
 import net.minecraft.level.Level;
 import net.minecraft.util.maths.Box;
 import net.modificationstation.stationapi.api.registry.Identifier;
@@ -23,7 +25,20 @@ public class GoldPlants extends TemplateBlockBase {
 
     @Override
     public int droppedMeta(int i) {
-        return i;
+        return 0;
+    }
+
+    @Override
+    public int getDropId(int meta, Random rand) {
+        switch (meta) {
+            case 0:
+                return ItemListener.skyStraw.id;
+            case 1:
+                return ItemBase.stick.id;
+            case 2:
+                return ItemListener.goldLettuceSeeds.id;
+        }
+        return BlockListener.goldPlants.id;
     }
 
     @Override

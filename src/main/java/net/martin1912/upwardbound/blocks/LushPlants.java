@@ -3,6 +3,7 @@ package net.martin1912.upwardbound.blocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.martin1912.upwardbound.events.init.BlockListener;
+import net.martin1912.upwardbound.events.init.ItemListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.minecraft.block.material.Material;
 import net.minecraft.level.Level;
@@ -25,7 +26,12 @@ public class LushPlants extends TemplateBlockBase {
 
     @Override
     public int droppedMeta(int i) {
-        return i;
+        return 0;
+    }
+
+    @Override
+    public int getDropId(int meta, Random rand) {
+        return ItemListener.skyStraw.id;
     }
 
     @Override

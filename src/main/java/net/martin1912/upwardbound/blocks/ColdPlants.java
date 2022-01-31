@@ -3,6 +3,7 @@ package net.martin1912.upwardbound.blocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.martin1912.upwardbound.events.init.BlockListener;
+import net.martin1912.upwardbound.events.init.ItemListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.martin1912.upwardbound.skyseasons.SkySeasonsCalculator;
 import net.minecraft.block.BlockBase;
@@ -29,6 +30,14 @@ public class ColdPlants extends TemplateBlockBase {
     @Override
     public int droppedMeta(int i) {
         return i;
+    }
+
+    @Override
+    public int getDropId(int meta, Random rand) {
+        if (meta == 0) {
+            return ItemListener.skyStraw.id;
+        }
+        return BlockListener.coldPlants.id;
     }
 
     @Override

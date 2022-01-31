@@ -1,9 +1,6 @@
 package net.martin1912.upwardbound.events.init;
 
-import net.martin1912.upwardbound.structures.BiomesDistributor;
-import net.martin1912.upwardbound.structures.PipesStressTest;
-import net.martin1912.upwardbound.structures.SkyLootDungeon;
-import net.martin1912.upwardbound.structures.EnergiumiteCrystal;
+import net.martin1912.upwardbound.structures.*;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.level.biome.Biome;
 import net.minecraft.level.dimension.Overworld;
@@ -29,6 +26,14 @@ public class ChunkListener {
                 int y = event.random.nextInt(64) + 32;
                 int z = event.z + event.random.nextInt(16);
                 new EnergiumiteCrystal().generate(event.level, event.random, x, y, z);
+            } else if (randomChance == 1) {
+                int x = event.x + event.random.nextInt(16);
+                int y = event.random.nextInt(8) + 16;
+                int z = event.z + event.random.nextInt(16);
+                AmidiaCluster.generate(event.level, event.random, x, y, z);
+            }
+            if (event.random.nextInt(20) == 0) {
+                event.level.setTile(event.x + event.random.nextInt(16), event.random.nextInt(20) + 20, event.z + event.random.nextInt(16), BlockListener.skyOres.id);
             }
             int x = event.x;
             int y = 127;

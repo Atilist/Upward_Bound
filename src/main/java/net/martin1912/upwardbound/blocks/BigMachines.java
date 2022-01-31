@@ -2,6 +2,7 @@ package net.martin1912.upwardbound.blocks;
 
 import net.martin1912.upwardbound.events.init.BlockListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
+import net.martin1912.upwardbound.mixin.BlockMetaAccessor;
 import net.martin1912.upwardbound.tileentities.TileEntitySkyBarrel;
 import net.minecraft.block.BlockBase;
 import net.minecraft.block.material.Material;
@@ -11,6 +12,8 @@ import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
 import net.modificationstation.stationapi.api.registry.BlockRegistry;
 import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
+
+import java.util.Random;
 
 @HasMetaNamedBlockItem
 public class BigMachines extends TemplateBlockBase {
@@ -97,18 +100,22 @@ public class BigMachines extends TemplateBlockBase {
 
     @Override
     public void onAdjacentBlockUpdate(Level level, int x, int y, int z, int id) {
+        Random random = new Random();
         int selfMeta = level.getTileMeta(x, y, z);
         if (level.hasRedstonePower(x, y, z)) {
             switch (selfMeta) {
                 case 0:
                     if (level.getTileId(x, y + 1, z) == BlockListener.skyBarrel.id && level.getTileId(x, y - 1, z) != 0) {
+                        BlockBase blockBase = BlockBase.BY_ID[level.getTileId(x, y - 1, z)];
+                        int dropID = blockBase.getDropId(level.getTileMeta(x, y - 1, z), random);
+                        int dropCount = blockBase.getDropCount(random);
+                        int dropMeta = ((BlockMetaAccessor) blockBase).upwardbound$invokeDroppedMeta(level.getTileMeta(x, y - 1, z));
                         TileEntitySkyBarrel tileEntitySkyBarrel = (TileEntitySkyBarrel) level.getTileEntity(x, y + 1, z);
                         if (tileEntitySkyBarrel.getBarrelItem() == null) {
-                            //BlockRegistry.INSTANCE.get(level.getTileId(x, y - 1, z));
-                            tileEntitySkyBarrel.setBarrelItem(new ItemInstance(level.getTileId(x, y - 1, z), 1, level.getTileMeta(x, y - 1, z)));
+                            tileEntitySkyBarrel.setBarrelItem(new ItemInstance(dropID, dropCount, dropMeta));
                             level.setTileWithMetadata(x, y - 1, z, 0, 0);
-                        } else if (tileEntitySkyBarrel.getBarrelItem().itemId == level.getTileId(x, y - 1, z) && tileEntitySkyBarrel.getBarrelItem().getDamage() == level.getTileMeta(x, y - 1, z)) {
-                            if (tileEntitySkyBarrel.changeItemCount(1)) {
+                        } else if (tileEntitySkyBarrel.getBarrelItem().itemId == dropID && tileEntitySkyBarrel.getBarrelItem().getDamage() == dropMeta) {
+                            if (tileEntitySkyBarrel.changeItemCount(dropCount)) {
                                 level.setTileWithMetadata(x, y - 1, z, 0, 0);
                             }
                         }

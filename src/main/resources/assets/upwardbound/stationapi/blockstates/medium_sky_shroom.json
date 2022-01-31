@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "meta=0": {
+      "model": "upwardbound:skystemnarrowmodel"
+    },
+    "meta=1": {
+      "model": "upwardbound:skyhatprematuremodel"
+    },
+    "meta=2": {
+      "model": "upwardbound:balloonstemnarrowmodel"
+    },
+    "meta=3": {
+      "model": "upwardbound:balloonstemnarrowvinesmodel"
+    }
+  }
+}

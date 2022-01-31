@@ -32,7 +32,6 @@
       "net.martin1912.upwardbound.events.init.KeyBindingListener",
       "net.martin1912.upwardbound.events.init.TextureListener",
       "net.martin1912.upwardbound.events.ingame.KeyPressedListener",
-      "net.martin1912.upwardbound.events.init.ModelListener",
       "net.martin1912.upwardbound.events.init.TileRendererListener"
     ],
     "stationapi:event_bus_server": [

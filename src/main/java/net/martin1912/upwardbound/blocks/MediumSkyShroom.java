@@ -3,8 +3,6 @@ package net.martin1912.upwardbound.blocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.martin1912.upwardbound.events.init.BlockListener;
-import net.martin1912.upwardbound.events.init.ModelListener;
-import net.martin1912.upwardbound.events.init.TextureListener;
 import net.martin1912.upwardbound.skyseasons.SkySeasonsCalculator;
 import net.minecraft.block.material.Material;
 import net.minecraft.level.BlockView;
@@ -19,7 +17,7 @@ import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
 import java.util.Random;
 
 @HasMetaNamedBlockItem
-public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldModelProvider, BlockInventoryModelProvider {
+public class MediumSkyShroom extends TemplateBlockBase {
 
     public MediumSkyShroom(Identifier identifier, Material material) {
         super(identifier, material);
@@ -47,6 +45,7 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
     @Override
     public boolean isFullOpaque() { return false; }
 
+    /*
     @Override
     public Model getInventoryModel(int meta) {
         switch (meta) {
@@ -80,6 +79,9 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
         }
     }
 
+     */
+
+    /*
     @Override
     public Model getCustomWorldModel(BlockView blockView, int x, int y, int z) {
         switch (blockView.getTileMeta(x, y, z)) {
@@ -116,6 +118,8 @@ public class MediumSkyShroom extends TemplateBlockBase implements BlockWorldMode
                 return ModelListener.skyStemNarrowBlockModel;
         }
     }
+
+     */
 
     @Override
     public void onScheduledTick(Level level, int x, int y, int z, Random rand) {

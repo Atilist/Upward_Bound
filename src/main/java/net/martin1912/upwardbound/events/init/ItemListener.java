@@ -24,7 +24,9 @@ public class ItemListener {
                                     energiumite,
                                     amidiaIngot,
                                     sensitiveDust,
-                                    sensorCrystal;
+                                    sensorCrystal,
+                                    skyStraw,
+                                    goldLettuceSeeds;
 
     @Entrypoint.ModID
     public static final ModID MOD_ID = Null.get();
@@ -45,5 +47,7 @@ public class ItemListener {
         amidiaIngot = new AmidiaIngot(Identifier.of(MOD_ID, "amidia_ingot")).setTranslationKey(MOD_ID, "amidia_ingot");
         sensitiveDust = new SensitiveDust(Identifier.of(MOD_ID, "sensitive_dust")).setTranslationKey(MOD_ID, "sensitive_dust");
         sensorCrystal = new SensorCrystal(Identifier.of(MOD_ID, "sensor_crystal")).setTranslationKey(MOD_ID, "sensor_crystal");
+        skyStraw = new SkyStraw(Identifier.of(MOD_ID, "sky_straw")).setTranslationKey(MOD_ID, "sky_straw");
+        goldLettuceSeeds = new GoldLettuceSeeds(Identifier.of(MOD_ID, "gold_lettuce_seeds")).setTranslationKey(MOD_ID, "gold_lettuce_seeds");
     }
 }
