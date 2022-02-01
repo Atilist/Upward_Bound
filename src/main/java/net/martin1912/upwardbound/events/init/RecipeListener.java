@@ -22,6 +22,8 @@ public class RecipeListener {
             CraftingRegistry.addShapedRecipe(new ItemInstance(ItemListener.rodOfDreams), " XZ", " YX", "Y  ", 'X', new ItemInstance(ItemListener.energiumite), 'Y', new ItemInstance(ItemListener.pureAlphium), 'Z', new ItemInstance(ItemBase.diamond));
             CraftingRegistry.addShapedRecipe(new ItemInstance(ItemListener.alphiumHoe), " ZZ", " Y ", " X ", 'X', new ItemInstance(ItemBase.stick), 'Y', new ItemInstance(ItemListener.pureAlphium), 'Z', new ItemInstance(ItemBase.ironIngot));
             CraftingRegistry.addShapedRecipe(new ItemInstance(BlockListener.metalBlocks), "XXX", "XXX", "XXX", 'X', new ItemInstance(ItemListener.amidiaIngot));
+            CraftingRegistry.addShapedRecipe(new ItemInstance(BlockListener.bigMachines, 1, 5), "XYX", "WZW", "XYX", 'W', new ItemInstance(BlockListener.skyPlanks), 'X', new ItemInstance(ItemListener.amidiaIngot), 'Y', new ItemInstance(ItemListener.sensorCrystal), 'Z', new ItemInstance(BlockBase.WORKBENCH));
+            CraftingRegistry.addShapedRecipe(new ItemInstance(BlockListener.skyBarrel, 1, 6), "XYX", "YZY", "XYX", 'X', new ItemInstance(ItemListener.amidiaIngot), 'Y', new ItemInstance(BlockListener.skyPlanks), 'Z', new ItemInstance(ItemListener.sensorCrystal));
         }
         //Input -> Output
         if (type == RecipeRegisterEvent.Vanilla.SMELTING.type()) {

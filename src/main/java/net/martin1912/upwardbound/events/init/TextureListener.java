@@ -266,7 +266,8 @@ public class TextureListener {
         SqueezerTop = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerTop")).index;
         SqueezerTopActive = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerTopActive")).index;
         SqueezerWeightSide = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerWeightSide")).index;
-        AutomaticCraftingTableSide = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/SqueezerWeightSide")).index;
+        AutomaticCraftingTableSide = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/AutomaticCraftingTableSide")).index;
+        ChestOutput = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "BigMachines/ChestOutput")).index;
 
         SkyBerryBlock = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "SkyFarming/SkyBerryBlock")).index;
 
@@ -508,6 +509,7 @@ public class TextureListener {
             SqueezerTopActive,
             SqueezerWeightSide,
             AutomaticCraftingTableSide,
+            ChestOutput,
 
             SkyBerryBlock,
 
