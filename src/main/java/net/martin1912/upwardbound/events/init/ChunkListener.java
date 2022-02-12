@@ -2,6 +2,7 @@ package net.martin1912.upwardbound.events.init;
 
 import net.martin1912.upwardbound.structures.*;
 import net.mine_diver.unsafeevents.listener.EventListener;
+import net.minecraft.block.BlockBase;
 import net.minecraft.level.biome.Biome;
 import net.minecraft.level.dimension.Overworld;
 import net.modificationstation.stationapi.api.event.level.gen.LevelGenEvent;
@@ -20,6 +21,10 @@ public class ChunkListener {
             }
         }
         if (event.biome == Biome.SKY) {
+            int x1 = event.x;
+            int y1 = 127;
+            int z1 = event.z;
+            new BiomesDistributor().generate(event.level, event.random, x1, y1, z1);
             int randomChance = event.random.nextInt(16);
             if (randomChance == 0) {
                 int x = event.x + event.random.nextInt(16);
@@ -32,13 +37,13 @@ public class ChunkListener {
                 int z = event.z + event.random.nextInt(16);
                 AmidiaCluster.generate(event.level, event.random, x, y, z);
             }
-            if (event.random.nextInt(20) == 0) {
-                event.level.setTile(event.x + event.random.nextInt(16), event.random.nextInt(20) + 20, event.z + event.random.nextInt(16), BlockListener.skyOres.id);
+            int randomX = event.x + event.random.nextInt(16);
+            int randomY = event.random.nextInt(20) + 20;
+            int randomZ = event.z + event.random.nextInt(16);
+            if (event.random.nextInt(20) == 0 && event.level.getTileId(randomX, randomY, randomZ) == BlockBase.STONE.id) {
+                event.level.setTile(randomX, randomY, randomZ, BlockListener.skyOres.id);
             }
-            int x = event.x;
-            int y = 127;
-            int z = event.z;
-            new BiomesDistributor().generate(event.level, event.random, x, y, z);
+
             //PipesStressTest.generate(event.level, event.random, x, 0, z);
         }
     }

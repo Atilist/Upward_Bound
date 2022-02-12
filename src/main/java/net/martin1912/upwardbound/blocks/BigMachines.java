@@ -9,18 +9,12 @@ import net.martin1912.upwardbound.tileentities.TileEntitySkyBarrel;
 import net.minecraft.block.BlockBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.container.ContainerBase;
-import net.minecraft.container.slot.Slot;
-import net.minecraft.entity.player.PlayerBase;
-import net.minecraft.inventory.Chest;
 import net.minecraft.inventory.Crafting;
 import net.minecraft.inventory.InventoryBase;
-import net.minecraft.item.ItemBase;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.level.Level;
 import net.minecraft.recipe.RecipeRegistry;
-import net.minecraft.tileentity.TileEntityChest;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
-import net.modificationstation.stationapi.api.registry.BlockRegistry;
 import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
 

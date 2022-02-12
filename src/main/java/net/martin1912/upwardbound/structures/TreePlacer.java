@@ -7,9 +7,9 @@ import net.minecraft.level.structure.Structure;
 
 import java.util.Random;
 
-public class TreePlacer {
-    int meta;
-    public void generate(Level level, Random rand, int x, int y, int z) {
+public abstract class TreePlacer {
+
+    public static void generate(Level level, Random rand, int x, int y, int z, int meta) {
         switch (meta) {
             case 0:
                 for (int growCheckX = -1; growCheckX <= 1; growCheckX++) {
@@ -26,7 +26,7 @@ public class TreePlacer {
                     level.setTile(x, height + y, z, BlockListener.skyLogs.id);
                 }
                 for (int leavesHeight = treeHeight; leavesHeight > 0; leavesHeight -= rand.nextInt(3) + 1) {
-                    int xzSize = rand.nextInt(4) * -1 - 1;
+                    int xzSize = rand.nextInt(3) * -1 - 1;
                     int xShift = rand.nextInt(xzSize * -2) + xzSize;
                     int zShift = rand.nextInt(xzSize * -2) + xzSize;
                     for (int xOffset = xzSize; xOffset <= xzSize * -1; xOffset++) {
@@ -140,7 +140,4 @@ public class TreePlacer {
                 }
             }
         }
-    public void setMeta(int pMeta) {
-        meta = pMeta;
-    }
 }

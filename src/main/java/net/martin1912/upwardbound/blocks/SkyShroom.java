@@ -5,7 +5,12 @@ import net.martin1912.upwardbound.events.init.ItemListener;
 import net.martin1912.upwardbound.events.init.TextureListener;
 import net.martin1912.upwardbound.skyseasons.SkySeasonsCalculator;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityBase;
+import net.minecraft.entity.Item;
+import net.minecraft.entity.monster.MonsterBase;
+import net.minecraft.item.ItemInstance;
 import net.minecraft.level.Level;
+import net.minecraft.util.maths.Box;
 import net.modificationstation.stationapi.api.block.HasMetaNamedBlockItem;
 import net.modificationstation.stationapi.api.registry.Identifier;
 import net.modificationstation.stationapi.api.template.block.TemplateBlockBase;
@@ -122,6 +127,23 @@ public class SkyShroom extends TemplateBlockBase {
             return BlockListener.coldPlants.id;
         }
         return BlockListener.skyShroom.id;
+    }
+
+    @Override
+    public void onEntityCollision(Level arg, int x, int y, int z, EntityBase arg1) {
+        if (arg1 instanceof MonsterBase && arg.getTileMeta(x, y, z) < 2) {
+            arg1.damage(null, 1);
+        } else if (arg1 instanceof Item && arg.getTileMeta(x, y, z) == 3) {
+            Item item = (Item) arg1;
+            ItemInstance itemInstance = item.item;
+        }
+    }
+
+
+    @Override
+    public Box getCollisionShape(Level level, int x, int y, int z) {
+        float var5 = 0.01F;
+        return Box.create((double) x, (double) y, (double) z, (double) ((float) (x + 1)), (double) ((float) (y + 1) - var5), (double) ((float) (z + 1)));
     }
 
     @Override

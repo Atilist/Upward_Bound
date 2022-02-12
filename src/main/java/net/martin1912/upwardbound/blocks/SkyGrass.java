@@ -214,7 +214,8 @@ public class SkyGrass extends TemplateBlockBase {
                         }
                 }
             default:
-                return super.getTextureForSide(side, meta);}
+                return super.getTextureForSide(side, meta);
+        }
     }
 
     @Override
@@ -242,7 +243,7 @@ public class SkyGrass extends TemplateBlockBase {
                     level.setTileWithMetadata(var6, var7, var8, BlockListener.skyGrass.id, level.getTileMeta(x, y, z));
                 }
             }
-            if (level.dimension instanceof Skylands && level.getTileMeta(x, y, z) == 0 && level.canSpawnEntity(Box.create(x - 1, y + 1, z - 1, x + 1, y + 2, z + 1))) {
+            if (level.dimension instanceof Skylands && level.getTileMeta(x, y, z) == 0 && level.canSpawnEntity(Box.create(x - 5, y + 1, z - 5, x + 5, y + 6, z + 5))) {
                 Chicken moo = new Chicken(level);
                 int randomizer = rand.nextInt(1000);
                 if (randomizer == 0) {

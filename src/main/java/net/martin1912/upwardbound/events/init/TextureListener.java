@@ -272,6 +272,13 @@ public class TextureListener {
         SkyBerryBlock = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "SkyFarming/SkyBerryBlock")).index;
 
         BerrySponge = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "SoakedSponges/BerrySponge")).index;
+
+        SmallColdSapling = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "Saplings/SmallColdSapling")).index;
+        SmallLushSapling = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "Saplings/SmallLushSapling")).index;
+        SmallGoldSapling = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "Saplings/SmallGoldSapling")).index;
+        ColdSapling = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "Saplings/ColdSapling")).index;
+        LushSapling = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "Saplings/LushSapling")).index;
+        GoldSapling = Atlases.getTerrain().addTexture(Identifier.of(MOD_ID, "Saplings/GoldSapling")).index;
     }
 
     public static int
@@ -513,7 +520,14 @@ public class TextureListener {
 
             SkyBerryBlock,
 
-            BerrySponge;
+            BerrySponge,
+
+            SmallColdSapling,
+            SmallLushSapling,
+            SmallGoldSapling,
+            ColdSapling,
+            LushSapling,
+            GoldSapling;
 }
 //Bloom
 //Drought

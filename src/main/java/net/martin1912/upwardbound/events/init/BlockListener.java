@@ -41,7 +41,8 @@ public class BlockListener {
                                     metalBlocks,
                                     bigMachines,
                                     farmBlocks,
-                                    soakedSponges;
+                                    soakedSponges,
+                                    saplings;
     public static TemplateBlockWithEntity skyBarrel;
 
     @Entrypoint.ModID
@@ -81,5 +82,6 @@ public class BlockListener {
         bigMachines = new BigMachines(Identifier.of(MOD_ID, "big_machines"), Material.PISTON).setHardness(1.0F).setTranslationKey("big_machines");
         farmBlocks = new FarmBlocks(Identifier.of(MOD_ID, "farm_blocks"), Material.WOOD).setHardness(0.5F).setTranslationKey("farm_blocks");
         soakedSponges = new SoakedSponges(Identifier.of(MOD_ID, "soaked_sponges"), Material.SPONGE).setHardness(0.5F).setTranslationKey("soaked_sponges");
+        saplings = new Saplings(Identifier.of(MOD_ID, "saplings"), Material.PLANT).setHardness(0.0F).setTranslationKey("saplings");
     }
 }
